@@ -49,6 +49,7 @@ const RoleBox = styled.div`
   align-items: center;
   > p {
     white-space: pre-line;
+    line-height: 2;
   }
 `;
 const SmallTitle = styled.div`
