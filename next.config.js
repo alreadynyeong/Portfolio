@@ -7,7 +7,7 @@ const nextConfig = {
   },
   images: {
     loader: "imgix",
-    path: "https://alreadynyeong.github.io/Portfolio/",
+    path: "/",
   },
 };
 
