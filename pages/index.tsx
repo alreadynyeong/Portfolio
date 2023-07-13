@@ -10,6 +10,8 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 100px;
+  margin-left: 30px;
 `;
 const HI = styled.div`
   font-size: 1.5rem;
@@ -18,7 +20,7 @@ const HI = styled.div`
 `;
 const Blank = styled.div`
   display: inline-block;
-  border: 1px solid black;
+  border: 2px solid black;
   margin-top: 20px;
   margin-bottom: 15px;
   width: 400px;
