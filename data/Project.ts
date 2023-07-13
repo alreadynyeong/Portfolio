@@ -21,21 +21,26 @@ export const ProjectList: Project[] = [
     part: ["Frontend", "Server", "Plan"],
     role: `
         • 칵테일 검색 결과 및 해당 레시피 조회
+
             - 술 종류, 제품명, 재료 등을 검색했을 때 해당 키워드가 포함되는 칵테일을 리스트로 출력
             - 해당 칵테일의 레시피 조회
 
         • 칵테일 랜덤 추천 조회
+
             - 저장된 칵테일 중 랜덤으로 추천해주는 기능
 
         • 우리동네 주류매장
+
             - 카카오 map API 사용
             - 검색한 위치 주변의 주류매장 위치, 간단한 정보 제공
             - 검색 키워드가 없을 경우 현재 위치 주변의 주류매장 정보 제공
 
         • 칵테일 랜덤 추천 조회
+
             - 저장된 칵테일 중 랜덤으로 추천해주는 기능
 
         • 나와 어울리는 술 테스트 frontend
+
             - mbti를 기반으로 술과 관련된 질문으로 각자 어울리는 칵테일을 추천해주는 서비스
         `,
   },
@@ -232,21 +237,26 @@ export const ProjectList: Project[] = [
     git: "https://github.com/UMCHackathon/Hackathon_client",
     role: `
         • 미션 페이지
+
             - 미션 조회
             - 댓글 리스트 조회
             - recoil을 이용한 데이터 추가, 삭제
             - 사진 업로드
 
         • 미션 추가 페이지
+
             - input, textarea를 이용한 텍스트 입력창
 
         • 헤더
+
             - 햄버거 바를 눌러 메뉴 조회 및 페이지 이동
 
         • 컴포넌트
+
             - 버튼 컴포넌트
             
         • 환경설정
+        
             - EsLint+Prettier 설정
         `,
   },
