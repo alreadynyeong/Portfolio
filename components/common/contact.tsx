@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
+import { ContactData } from "@/data/Contact";
+
 const Container = styled.div`
   position: fixed;
   width: 130px;
-  height: 110px;
+  height: 155px;
   border: 1px solid black;
   border-radius: 20px;
   padding: 10px;
@@ -26,16 +28,13 @@ const Text = styled.div`
 const Contact = () => {
   return (
     <Container>
-      <div>
-        <a href="https://github.com/alreadynyeong">
-          <Text>Github</Text>
-        </a>
-      </div>
-      <div>
-        <a href="mailto:already.nyeong@gmail.com">
-          <Text>Mail</Text>
-        </a>
-      </div>
+      {ContactData.map((contact) => (
+        <div key={contact.title}>
+          <a href={contact.path}>
+            <Text>{contact.title}</Text>
+          </a>
+        </div>
+      ))}
     </Container>
   );
 };
