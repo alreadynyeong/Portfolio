@@ -63,7 +63,7 @@ const About = () => {
                   <Rank>{award.rank}</Rank>
                   <a href={`/projects/${award.projectNum}`}>
                     <Image
-                      src={"/ArrowRight.png"}
+                      src={"ArrowRight.png"}
                       width={13}
                       height={13}
                       alt={""}
