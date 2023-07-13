@@ -5,10 +5,10 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  assetPrefix:
-    process.env.NODE_ENV === "production"
-      ? "https://boramyy.github.io/invitation"
-      : "",
+  images: {
+    loader: "imgix",
+    path: "https://alreadynyeong.github.io/Portfolio/",
+  },
 };
 
 module.exports = nextConfig;
