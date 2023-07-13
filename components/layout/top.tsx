@@ -74,8 +74,10 @@ const Top = () => {
           <text>Lee Min Hyeong </text>
           <div onClick={() => setShow(!show)}>
             <Image
-              src={`Arrow${show ? "Up" : "Down"}.png`}
-              alt={"ArrowDown"}
+              src={`https://alreadynyeong.github.io/Portfolio/Arrow${
+                show ? "Up" : "Down"
+              }.png`}
+              alt={"+"}
               width={30}
               height={30}
             />

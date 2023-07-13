@@ -8,6 +8,7 @@ const nextConfig = {
   images: {
     loader: "default",
     path: "https://alreadynyeong.github.io/Portfolio/",
+    unoptimized: true,
   },
 };
 
