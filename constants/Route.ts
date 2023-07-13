@@ -8,9 +8,9 @@ export const Routes: { [key: string]: Route } = {
     path: "/",
     title: "Home",
   },
-  ABOUT: {
-    path: "/about",
-    title: "About",
+  CONTACT: {
+    path: "/contact",
+    title: "Contact",
   },
   ACTIVITY: {
     path: "/activity",
@@ -24,7 +24,7 @@ export const Routes: { [key: string]: Route } = {
 
 export const NavMenu = [
   Routes.HOME,
-  Routes.ABOUT,
+  Routes.CONTACT,
   Routes.ACTIVITY,
   Routes.PROJECT,
 ];
