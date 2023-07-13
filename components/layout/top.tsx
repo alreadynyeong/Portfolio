@@ -1,7 +1,12 @@
+import { useState } from "react";
+
+import Image from "next/image";
 import router from "next/router";
 import styled from "styled-components";
 
 import { NavMenu } from "@/constants/Route";
+
+import Contact from "../common/contact";
 
 const Container = styled.div`
   padding: 0px;
@@ -12,21 +17,22 @@ const Container = styled.div`
   position: fixed;
   box-shadow: 5px 0.2px 5px 1px lightgray;
   background-color: white;
+  overflow: hidden;
 `;
 const MenuContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
-  padding-left: 50px;
-  margin-right: 40px;
+  gap: 40px;
+  padding-left: 30px;
+  margin-right: 10px;
 `;
 const Menu = styled.div`
   width: fit-content;
   height: fit-content;
   display: flex;
   align-items: center;
-  border-radius: 51px;
+  border-radius: 50px;
   border: 1px solid;
   padding: 10px;
   text-decoration: none;
@@ -35,13 +41,16 @@ const Menu = styled.div`
 const Title = styled.div`
   display: flex;
   align-items: center;
-  padding-right: 50px;
-  font-size: 30px;
+  padding-right: 30px;
+  font-size: 2.5rem;
   font-weight: bold;
-  text-decoration: none;
   cursor: pointer;
+  gap: 10px;
+  > div {
+    padding-top: 10px;
 `;
 const Top = () => {
+  const [show, setShow] = useState<boolean>(true);
   return (
     <>
       <Container>
@@ -53,8 +62,17 @@ const Top = () => {
           ))}
         </MenuContainer>
         <Title>
-          <text>Lee min hyeong </text>
+          <text>Lee Min Hyeong </text>
+          <div onClick={() => setShow(!show)}>
+            <Image
+              src={`/arrow${show ? "Up" : "Down"}.png`}
+              alt={"ArrowDown"}
+              width={30}
+              height={30}
+            />
+          </div>
         </Title>
+        {show && <Contact />}
       </Container>
     </>
   );
