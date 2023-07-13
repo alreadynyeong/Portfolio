@@ -21,7 +21,7 @@ const Projects = () => {
         .map((project) => (
           <ProjectContainer
             key={project.id}
-            onClick={() => router.push(`/Portfolio/projects/${project.id}`)}
+            onClick={() => router.push(`/projects/${project.id}`)}
           >
             <ProjectBox project={project} />
           </ProjectContainer>
