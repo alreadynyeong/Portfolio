@@ -6,7 +6,7 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    loader: "imgix",
+    loader: "default",
     path: "https://alreadynyeong.github.io/Portfolio/",
   },
 };
