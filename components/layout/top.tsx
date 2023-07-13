@@ -4,7 +4,7 @@ import Image from "next/image";
 import router from "next/router";
 import styled from "styled-components";
 
-import { NavMenu } from "@/constants/Route";
+import { NavMenu } from "@/data/Route";
 
 import Contact from "../common/contact";
 

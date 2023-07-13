@@ -1,8 +1,8 @@
 const Activity = () => {
   return (
-    <main>
+    <div>
       <h1>Activity</h1>
-    </main>
+    </div>
   );
 };
 
