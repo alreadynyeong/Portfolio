@@ -89,7 +89,7 @@ const Detail = () => {
       <Skils skills={data?.skills} />
       <ImageBox>
         <Image
-          src={`https://alreadynyeong.github.io/public/Portfolio/projects/${data?.id}.png`}
+          src={`https://alreadynyeong.github.io/Portfolio/Portfolio/projects/${data?.id}.png`}
           width={500}
           height={300}
           alt={""}
