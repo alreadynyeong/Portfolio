@@ -67,7 +67,7 @@ const Activity = () => {
                       <a href={`/projects/${content.projectNum}`}>
                         <Image
                           src={
-                            "https://alreadynyeong.github.io/Portfolio/public/ArrowRight.png"
+                            "https://alreadynyeong.github.io/Portfolio/ArrowRight.png"
                           }
                           width={13}
                           height={13}
