@@ -29,7 +29,7 @@ const ProjectBox = ({ project }: { project: Project }) => {
     <Container>
       <ImageBox>
         <Image
-          src={`https://alreadynyeong.github.io/Portfolio//projects/${project.id}.png`}
+          src={`projects/${project.id}.png`}
           width={300}
           height={200}
           alt={""}
