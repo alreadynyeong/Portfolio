@@ -23,7 +23,7 @@ const MenuContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   padding-left: 30px;
   margin-right: 10px;
 `;
@@ -32,11 +32,13 @@ const Menu = styled.div`
   height: fit-content;
   display: flex;
   align-items: center;
-  border-radius: 50px;
-  border: 1px solid;
+  border-bottom: 1px solid gray;
   padding: 10px;
   text-decoration: none;
   cursor: pointer;
+  &:hover {
+    color: green;
+  }
 `;
 const Title = styled.div`
   display: flex;
@@ -50,7 +52,7 @@ const Title = styled.div`
     padding-top: 10px;
 `;
 const Top = () => {
-  const [show, setShow] = useState<boolean>(true);
+  const [show, setShow] = useState<boolean>(false);
   return (
     <>
       <Container>
