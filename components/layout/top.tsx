@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
-import router from "next/router";
+import router, { useRouter } from "next/router";
 import styled from "styled-components";
 
 import { NavMenu } from "@/data/Route";
@@ -53,13 +53,20 @@ const Title = styled.div`
 `;
 const Top = () => {
   const [show, setShow] = useState<boolean>(false);
+
+  const path = useRouter().pathname;
+  console;
   return (
     <>
       <Container>
         <MenuContainer>
           {NavMenu.map((menu) => (
             <Menu key={menu.title} onClick={() => router.push(menu.path)}>
-              <text>{menu.title}</text>
+              {path === menu.path ? (
+                <text style={{ color: "green" }}>{menu.title}</text>
+              ) : (
+                <text>{menu.title}</text>
+              )}
             </Menu>
           ))}
         </MenuContainer>
