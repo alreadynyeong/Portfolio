@@ -57,7 +57,12 @@ export default function Home() {
                   info < InfoData.length - 1 ? setInfo(info + 1) : setInfo(0)
                 }
               >
-                <Image src="ArrowRight.png" width={30} height={30} alt={""} />
+                <Image
+                  src="https://alreadynyeong.github.io/Portfolio/ArrowRight.png"
+                  width={30}
+                  height={30}
+                  alt={""}
+                />
               </Arrow>
             </div>
             <div style={{ textAlign: "right", paddingRight: "42px" }}>
