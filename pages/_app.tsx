@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <Head>
-        <title>HOME</title>
+        <title>Portfolio</title>
       </Head>
       <Top />
       <main className={notoSansKr.className}>
