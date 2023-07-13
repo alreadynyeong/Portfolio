@@ -1,4 +1,3 @@
-import router from "next/router";
 import styled from "styled-components";
 
 import ProjectBox from "@/components/common/projectBox";
@@ -19,11 +18,10 @@ const Projects = () => {
       {ProjectList.slice()
         .reverse()
         .map((project) => (
-          <ProjectContainer
-            key={project.id}
-            onClick={() => router.push(`/projects/${project.id}`)}
-          >
-            <ProjectBox project={project} />
+          <ProjectContainer key={project.id}>
+            <a href={`/Portfolio/project?id=${project.id}`}>
+              <ProjectBox project={project} />
+            </a>
           </ProjectContainer>
         ))}
     </div>

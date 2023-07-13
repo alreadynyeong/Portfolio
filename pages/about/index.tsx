@@ -61,7 +61,7 @@ const About = () => {
                   {award.title}
                   <Date>{award.date}</Date>
                   <Rank>{award.rank}</Rank>
-                  <a href={`/Portfolio/projects/${award.projectNum}`}>
+                  <a href={`/Portfolio/project/${award.projectNum}`}>
                     <Image
                       src={
                         "https://alreadynyeong.github.io/Portfolio/ArrowRight.png"

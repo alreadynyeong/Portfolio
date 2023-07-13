@@ -63,8 +63,12 @@ const SmallTitle = styled.div`
 `;
 const Detail = () => {
   const router = useRouter();
-  const id = Number(router.query.id);
+  const id = Number(router.query.id) || router.query?.id;
   const data = ProjectList.find((p) => p.id == id);
+
+  if (!data) {
+    return <div>프로젝트를 찾을 수 없습니다.</div>;
+  }
   return (
     <Container>
       <Top>
@@ -72,14 +76,14 @@ const Detail = () => {
           {data?.title} <Date>{data?.duration}</Date>
         </Title>
         <div>
-          {data?.git && (
-            <a href={data?.git} target="_blank">
+          {data.git && (
+            <a href={data.git} target="_blank" rel="noopener noreferrer">
               GIT
             </a>
           )}
-          {data?.git && data?.link && <span> | </span>}
-          {data?.link && (
-            <a href={data?.link} target="_blank">
+          {data.git && data.link && <span> | </span>}
+          {data.link && (
+            <a href={data.link} target="_blank" rel="noopener noreferrer">
               LINK
             </a>
           )}
