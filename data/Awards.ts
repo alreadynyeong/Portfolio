@@ -16,7 +16,7 @@ export const AwardList: Award[] = [
     rank: "은상",
     role: "기획/Frontend 개발",
     project: "Hi Alcohol v.2",
-    projectNum: 0,
+    projectNum: 1,
   },
   {
     id: 1,
@@ -25,7 +25,7 @@ export const AwardList: Award[] = [
     rank: "우수상",
     role: "Frontend 개발",
     project: "Re:MEMORY",
-    projectNum: 1,
+    projectNum: 6,
   },
   {
     id: 2,
@@ -34,6 +34,6 @@ export const AwardList: Award[] = [
     rank: "최우수상",
     role: "Frontend 개발",
     project: "Green Quest",
-    projectNum: 2,
+    projectNum: 7,
   },
 ];

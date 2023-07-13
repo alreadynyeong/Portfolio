@@ -52,25 +52,27 @@ const About = () => {
       </Box>
       <Box>
         <Title>수상</Title>
-        {AwardList.reverse().map((award) => (
-          <>
-            <Content key={award.title}>
-              <div>
-                {award.title}
-                <Date>{award.date}</Date>
-                <Rank>{award.rank}</Rank>
-                <a href={`/projects/${award.projectNum}`}>
-                  <Image
-                    src={"/ArrowRight.png"}
-                    width={13}
-                    height={13}
-                    alt={""}
-                  />
-                </a>
-              </div>
-            </Content>
-          </>
-        ))}
+        {AwardList.slice()
+          .reverse()
+          .map((award) => (
+            <>
+              <Content key={award.title}>
+                <div>
+                  {award.title}
+                  <Date>{award.date}</Date>
+                  <Rank>{award.rank}</Rank>
+                  <a href={`/projects/${award.projectNum}`}>
+                    <Image
+                      src={"/ArrowRight.png"}
+                      width={13}
+                      height={13}
+                      alt={""}
+                    />
+                  </a>
+                </div>
+              </Content>
+            </>
+          ))}
       </Box>
     </Container>
   );
