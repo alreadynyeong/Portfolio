@@ -1,19 +1,41 @@
+import { useState } from "react";
+
 import Head from "next/head";
+import Image from "next/image";
 import styled from "styled-components";
+
+import { InfoData } from "@/data/Info";
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
 `;
 const HI = styled.div`
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: semi-bold;
+  padding: 40px;
 `;
-
+const Blank = styled.div`
+  display: inline-block;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 400px;
+  height: 70px;
+  padding: 14px;
+`;
+const Arrow = styled.div`
+  padding-top: 16px;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 20px;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
 export default function Home() {
+  const [info, setInfo] = useState<number>(0);
   return (
     <>
       <Head>
@@ -23,7 +45,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <HI>안녕하세요. WEB 개발자 이민형입니다.</HI>
+        <div>
+          <HI>
+            안녕하세요.
+            <div style={{ display: "flex" }}>
+              <Blank>{InfoData[info]}</Blank>
+              <Arrow
+                onClick={() =>
+                  info < InfoData.length - 1 ? setInfo(info + 1) : setInfo(0)
+                }
+              >
+                <Image src="/ArrowRight.png" width={30} height={30} alt={""} />
+              </Arrow>
+            </div>
+            <div style={{ textAlign: "right", paddingRight: "42px" }}>
+              이민형입니다.
+            </div>
+          </HI>
+        </div>
       </Container>
     </>
   );
