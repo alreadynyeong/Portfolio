@@ -31,10 +31,23 @@ const Date = styled.span`
 const Rank = styled.span`
   font-size: 1.1rem;
   color: green;
-  font-weight: semi-bold;
   margin-left: 10px;
   margin-right: 10px;
 `;
+const Skill = styled.div`
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: flex;
+  > div {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: gray;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+`;
+
 const About = () => {
   return (
     <Container>
@@ -75,6 +88,31 @@ const About = () => {
               </Content>
             </>
           ))}
+      </Box>
+      <Box>
+        <Title>스킬</Title>
+        <Content>
+          <Skill>
+            Skill
+            <div>React.js</div>
+            <div>Next.js</div>
+            <div>React-native</div>
+            <div>Node.js</div>
+          </Skill>
+          <Skill>
+            Language
+            <div>JavaScript</div>
+            <div>TypeScript</div>
+            <div>Python</div>
+          </Skill>
+          <Skill>
+            Tool
+            <div>Git/GitHub</div>
+            <div>Figma</div>
+            <div>Discord/Slack</div>
+            <div>Jira/Confluence</div>
+          </Skill>
+        </Content>
       </Box>
     </Container>
   );
