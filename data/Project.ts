@@ -208,4 +208,62 @@ export const ProjectList: Project[] = [
         해당 메뉴에서 화면 이동이 가능합니다.
         `,
   },
+  {
+    id: 8,
+    title: "Todis",
+    skills: ["React", "TypeScript", "Styled-component", "Eslint+Prettier"],
+    description:
+      "날씨에 맞는 코디 포인트 추천! 귀여운 아바타로 친구와 OOTD도 공유가 가능한 웹사이트",
+    duration: "2023.07.12~2023.08.23",
+    part: ["Frontend", "Part Leader"],
+    git: "https://github.com/Todis-UMC/Todis_web",
+    link: "http://todis.s3-website.ap-northeast-2.amazonaws.com/",
+    role: `
+      EsLint+Prettier를 사용해 코드 스타일을 일관성 있게 유지했습니다.
+      Font를 편하게 사용하기 위해 CSSProperties를 사용해 스타일을 정의했습니다.
+
+      Input 컴포넌트를 만들었습니다. 기본적인 text input으로 사용이 가능하며 type으로 password를 줄 경우에는 입력 값을 숨길 수 있는 버튼이 활성화됩니다.
+      로그인, 회원가입 등의 화면 구현을 위한 컴포넌트를 만들어 사용했습니다.
+
+      이메일과 비밀번호를 통해 로그인이 가능하며, 로그인 시에는 토큰을 발급받아 localStorage에 저장했습니다.
+      구글과 카카오를 통한 로그인도 가능합니다.
+
+      회원가입 시에는 이메일, 비밀번호, 닉네임을 입력받습니다.
+      닉네임과 비밀번호는 회원정보 수정 페이지에서 변경이 가능합니다.
+      비밀번호를 잊은 사용자를 위한 비밀번호 찾기 페이지도 구현했습니다. 사용자가 입력한 이메일로 임시 비밀번호가 발급됩니다.
+
+      모바일 상태의 사이드 메뉴를 구현했습니다.
+      keyframes를 사용해 애니메이션을 추가했습니다.
+
+      모바일 사용자를 위한 반응형 웹을 구현했습니다.
+      styled-component에서 @media를 사용해 화면 크기에 따라 스타일을 변경했습니다.
+      스타일의 변경이 많은 경우 window.innerWidth를 이용해 만든 컴포넌트를 활용해 화면 크기에 따라 컴포넌트를 렌더링했습니다.
+
+      react-toastify를 사용해 토스트 메시지를 구현했습니다.
+      react-spinners를 사용해 로딩 중임을 알려주는 컴포넌트를 구현했습니다.
+      `,
+  },
+  {
+    id: 9,
+    title: "Landing Page",
+    skills: ["React", "TypeScript", "Styled-component", "Eslint+Prettier"],
+    description: "Landing Page",
+    duration: "2023.08.08~2023.09.08",
+    part: ["Frontend"],
+    git: "https://github.com/DLenc/Randing",
+    role: `
+      EsLint+Prettier를 사용해 코드 스타일을 일관성 있게 유지했습니다.
+      Font를 편하게 사용하기 위해 CSSProperties를 사용해 스타일을 정의했습니다.
+      Color를 편하게 사용하기 위해 Color를 정의한 파일을 만들어 사용했습니다.
+
+      랜딩 페이지의 최상단의 표지를 구현했습니다.
+      중간의 배너를 구현했습니다.
+
+      층간 소음이 발생할 정도의 소음이 생기면 알려주는 기능을 소개하는 섹션을 구현했습니다.
+
+      디자인 상 페이지에서 빠지게 되었지만,
+      react-you-tube를 사용해 유튜브 영상을 불러오는 기능을 구현했습니다.
+      &::-webkit-scrollbar를 이용해 스크롤바의 스타일을 변경했습니다.
+      `,
+  },
 ];
