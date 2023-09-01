@@ -65,14 +65,16 @@ const Activity = () => {
                     <div>
                       <Project>{content.project}</Project>
                       <a href={`/Portfolio/project?id=${content.projectNum}`}>
-                        <Image
-                          src={
-                            "https://alreadynyeong.github.io/Portfolio/ArrowRight.png"
-                          }
-                          width={13}
-                          height={13}
-                          alt={">"}
-                        />
+                        {content.projectNum && (
+                          <Image
+                            src={
+                              "https://alreadynyeong.github.io/Portfolio/ArrowRight.png"
+                            }
+                            width={13}
+                            height={13}
+                            alt={">"}
+                          />
+                        )}
                       </a>
                     </div>
                   </Actiivty>
