@@ -69,7 +69,7 @@ export const ProjectList: Project[] = [
   {
     id: 2,
     title: "withParents",
-    skills: ["React-native cli", "JavaScript", "StyleSheet"],
+    skills: ["React-native", "cli", "JavaScript", "StyleSheet"],
     description: "고령층 부모의 헬스케어와 커뮤니케이션을 위한 서비스",
     duration: "2022.11.15~2023.03.30",
     part: ["Frontend", "Plan", "Design", "Lead"],
@@ -136,7 +136,7 @@ export const ProjectList: Project[] = [
   {
     id: 5,
     title: "수정광산",
-    skills: ["React-native cli", "TypeScript", "StyleSheet"],
+    skills: ["React-native", "cli", "TypeScript", "StyleSheet"],
     description: "성신여자대학교 학생들을 위한 자체 커뮤니티 어플",
     duration: "2022.10.13 ~",
     part: ["Frontend"],
@@ -159,7 +159,7 @@ export const ProjectList: Project[] = [
   {
     id: 6,
     title: "Re:MEMORY",
-    skills: ["React-native expo", "TypeScript", "StyleSheet"],
+    skills: ["React-native", "expo", "TypeScript", "StyleSheet"],
     description:
       "챗GPT가 되찾아준 나의 소중한 기억. 어린 시절 추억의 키워드를 입력해 내 추억을 이미지로 기록하고 기억을 공유하는 서비스",
     duration: "2023.06.11~2023.06.12",
