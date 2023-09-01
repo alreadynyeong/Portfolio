@@ -9,8 +9,8 @@ export interface Activity {
 interface Content {
   id: number;
   text?: string;
-  project: string;
-  projectNum: number;
+  project?: string;
+  projectNum?: number;
 }
 
 export const ActivityList: Activity[] = [
@@ -34,19 +34,19 @@ export const ActivityList: Activity[] = [
       },
     ],
   },
-  {
-    id: 1,
-    title: "Pycon Korea 2023",
-    date: "2023.01~2023.07",
-    role: "FE 개발 자원봉사자",
-    content: [
-      {
-        id: 0,
-        project: "Pycon Korea 2023",
-        projectNum: 3,
-      },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: "Pycon Korea 2023",
+  //   date: "2023.01~2023.07",
+  //   role: "FE 개발 자원봉사자",
+  //   content: [
+  //     {
+  //       id: 0,
+  //       project: "Pycon Korea 2023",
+  //       projectNum: 3,
+  //     },
+  //   ],
+  // },
   {
     id: 2,
     title: "수정광산 SaltyLab 1기",
@@ -77,6 +77,35 @@ export const ActivityList: Activity[] = [
         text: "4회 UMC 해커톤 우수상",
         project: "Green Quest",
         projectNum: 7,
+      },
+      {
+        id: 2,
+        text: "프로젝트 참여",
+        project: "Todis",
+        projectNum: 8,
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "DLenc 층간소음 프로젝트",
+    date: "2023.08~2023.09",
+    role: "Frontend 개발자",
+    content: [
+      {
+        id: 0,
+        text: "대전 연구소 층간 소음 견학",
+      },
+
+      {
+        id: 1,
+        text: "NE(O)RDINARY 데모데이 부스 참여",
+      },
+      {
+        id: 2,
+        text: "KPRA 컨텐츠 기반 랜딩페이지 제작",
+        project: "Landing Page",
+        projectNum: 9,
       },
     ],
   },
