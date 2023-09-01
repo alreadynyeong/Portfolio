@@ -51,8 +51,8 @@ const Projects = () => {
         <Skills>
           <Image
             src={"https://alreadynyeong.github.io/Portfolio/Filter.png"}
-            width={30}
-            height={30}
+            width={20}
+            height={20}
             alt={""}
           />
           <Skill

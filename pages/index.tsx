@@ -17,15 +17,24 @@ const HI = styled.div`
   font-size: 1.5rem;
   font-weight: semi-bold;
   padding: 40px;
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    padding: 20px;
+  }
 `;
 const Blank = styled.div`
   display: inline-block;
   border: 2px solid black;
   margin-top: 20px;
   margin-bottom: 15px;
-  width: 400px;
+  max-width: 400px;
   height: 70px;
   padding: 14px;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 2rem;
+    min-width: 150px;
+  }
 `;
 const Arrow = styled.div`
   padding-top: 16px;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
 import Parts from "@/components/common/part";
@@ -16,6 +17,9 @@ const Title = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   padding: 30px;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 const ImageBox = styled.div`
   width: 500px;
@@ -25,6 +29,10 @@ const ImageBox = styled.div`
   box-shadow: 5px 5px 5px 1px lightgray;
   border: 1px solid lightgray;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 200px;
+  }
 `;
 const Content = styled.div`
   margin: 0 auto;
@@ -66,6 +74,8 @@ const Detail = () => {
   const id = Number(router.query.id) || router.query?.id;
   const data = ProjectList.find((p) => p.id == id);
 
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   if (!data) {
     return <div>프로젝트를 찾을 수 없습니다.</div>;
   }
@@ -94,8 +104,8 @@ const Detail = () => {
       <ImageBox>
         <Image
           src={`https://alreadynyeong.github.io/Portfolio/projects/${data?.id}.png`}
-          width={500}
-          height={300}
+          width={isMobile ? 300 : 500}
+          height={isMobile ? 200 : 300}
           alt={""}
         />
       </ImageBox>

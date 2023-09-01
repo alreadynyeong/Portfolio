@@ -1,7 +1,7 @@
 import { Noto_Sans_KR } from "next/font/google";
 import Head from "next/head";
 
-import Top from "@/components/layout/top";
+import Nav from "@/components/layout/nav";
 import "@/styles/globals.css";
 import { GlobalStyle } from "@/styles/globalStyle";
 
@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <Top />
+      <Nav />
       <main className={notoSansKr.className}>
         <Component {...pageProps} />
       </main>

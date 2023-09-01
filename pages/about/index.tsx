@@ -38,13 +38,18 @@ const Skill = styled.div`
   font-size: 1rem;
   margin-bottom: 20px;
   font-weight: bold;
-  display: flex;
   > div {
-    font-weight: normal;
-    font-size: 0.9rem;
-    color: gray;
-    margin-top: 10px;
     margin-left: 20px;
+    display: flex;
+    overflow: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    > div {
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: gray;
+      margin-top: 10px;
+    }
   }
 `;
 
@@ -94,23 +99,29 @@ const About = () => {
         <Content>
           <Skill>
             Skill
-            <div>React.js</div>
-            <div>Next.js</div>
-            <div>React-native</div>
-            <div>Node.js</div>
+            <div>
+              <div>React.js</div>
+              <div>Next.js</div>
+              <div>ReactNative</div>
+              <div>Node.js</div>
+            </div>
           </Skill>
           <Skill>
             Language
-            <div>JavaScript</div>
-            <div>TypeScript</div>
-            <div>Python</div>
+            <div>
+              <div>JavaScript</div>
+              <div>TypeScript</div>
+              <div>Python</div>
+            </div>
           </Skill>
           <Skill>
             Tool
-            <div>Git/GitHub</div>
-            <div>Figma</div>
-            <div>Discord/Slack</div>
-            <div>Jira/Confluence</div>
+            <div>
+              <div>Git/GitHub</div>
+              <div>Figma</div>
+              <div>Discord/Slack</div>
+              <div>Jira/Confluence</div>
+            </div>
           </Skill>
         </Content>
       </Box>

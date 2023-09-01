@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import router, { useRouter } from "next/router";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
 import { NavMenu } from "@/data/Route";
 
 import Contact from "../common/contact";
+import MobileMenu from "../common/menu";
 
 const Container = styled.div`
   padding: 0px;
@@ -50,26 +52,62 @@ const Title = styled.div`
   gap: 10px;
   > div {
     padding-top: 10px;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
-const Top = () => {
+const ImageBox = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+  cursor: pointer;
+`;
+const Nav = () => {
   const [show, setShow] = useState<boolean>(false);
+  const [menu, setMenu] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const path = useRouter().pathname;
-  console;
+
+  const mobile = useMediaQuery({ query: "(max-width: 768px)" });
+  useEffect(() => {
+    setIsMobile(mobile);
+  }, []);
+
   return (
     <>
       <Container>
-        <MenuContainer>
-          {NavMenu.map((menu) => (
-            <Menu key={menu.title} onClick={() => router.push(menu.path)}>
-              {path === menu.path ? (
-                <text style={{ color: "green" }}>{menu.title}</text>
-              ) : (
-                <text>{menu.title}</text>
-              )}
-            </Menu>
-          ))}
-        </MenuContainer>
+        {isMobile ? (
+          <ImageBox onClick={() => setMenu(!menu)}>
+            <Image
+              src={"https://alreadynyeong.github.io/Portfolio/Menu.png"}
+              width={20}
+              height={20}
+              alt={""}
+            />
+          </ImageBox>
+        ) : (
+          <MenuContainer>
+            {NavMenu.map((menu) => (
+              <Menu key={menu.title} onClick={() => router.push(menu.path)}>
+                {path === menu.path ? (
+                  <text style={{ color: "green" }}>{menu.title}</text>
+                ) : (
+                  <text>{menu.title}</text>
+                )}
+              </Menu>
+            ))}
+          </MenuContainer>
+        )}
+        {menu && (
+          <MobileMenu
+            onClose={() => {
+              setMenu(false);
+            }}
+          />
+        )}
         <Title>
           <text>Lee Min Hyeong </text>
           <div onClick={() => setShow(!show)}>
@@ -89,4 +127,4 @@ const Top = () => {
   );
 };
 
-export default Top;
+export default Nav;

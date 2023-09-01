@@ -9,6 +9,9 @@ const Skill = styled.div`
   border-radius: 12px;
   font-size: 0.8rem;
   color: green;
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const Skils = ({ skills }: { skills: string[] | undefined }) => {
