@@ -87,22 +87,22 @@ export const ProjectList: Project[] = [
     react-native-calendars를 사용하여 달력을 조회하고, 가족 공동 일정을 모달창을 통해 조회, 삭제, 작성, 수정이 가능합니다.
         `,
   },
-  {
-    id: 3,
-    title: "Pycon Korea 2023",
-    skills: ["React", "Next", "TypeScript", "Stiches", "Eslint+Prettier"],
-    description:
-      "세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스 “파이콘”의 2023 한국 홈페이지",
-    duration: "2023.01.26~",
-    part: ["Frontend"],
-    git: "https://github.com/pythonkr/pyconkr-2023-frontend",
-    link: "https://2023.pycon.kr/",
-    role: `
-        FAQ에서 사용될 Toggle 컴포넌트를 구현했습니다.
-        
-        파이콘에서 진행되는 세션을 조회할 수 있는 세션 목록 페이지를 구현했습니다.
-        `,
-  },
+  // {
+  //   id: 3,
+  //   title: "Pycon Korea 2023",
+  //   skills: ["React", "Next", "TypeScript", "Stiches", "Eslint+Prettier"],
+  //   description:
+  //     "세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스 “파이콘”의 2023 한국 홈페이지",
+  //   duration: "2023.01.26~",
+  //   part: ["Frontend"],
+  //   git: "https://github.com/pythonkr/pyconkr-2023-frontend",
+  //   link: "https://2023.pycon.kr/",
+  //   role: `
+  //       FAQ에서 사용될 Toggle 컴포넌트를 구현했습니다.
+
+  //       파이콘에서 진행되는 세션을 조회할 수 있는 세션 목록 페이지를 구현했습니다.
+  //       `,
+  // },
   {
     id: 4,
     title: "GDSC SSWU",
@@ -154,6 +154,9 @@ export const ProjectList: Project[] = [
     채팅방에서는 채팅을 전송할 수 있고, 갤러리 및 촬영을 통해 이미지를 전송할 수 있도록 했습니다.
     실시간으로 채팅이 가능하며, 상대방이 있었는지의 여부도 확인 가능합니다.
     채팅방에서 상대를 차단하거나 나갈 수 있습니다.
+
+    해당 프로젝트는 현재 앱스토어와 구글 플레이 스토어에 배포되어 있으며,
+    6000명 이상의 사용자를 보유하고 있습니다.
         `,
   },
   {
@@ -179,6 +182,8 @@ export const ProjectList: Project[] = [
     
     추억 이미지 결과 페이지에서는 이미지 저장 기능이 존재합니다.
     이때 react-native-easy-toast를 이용해 토스트 메시지를 생성했습니다.
+
+    해당 프로젝트는 제 4회 NE(O)DINARY 해커톤에서 진행된 프로젝트로, 우수상을 수상했습니다.
         `,
   },
   {
@@ -206,6 +211,8 @@ export const ProjectList: Project[] = [
 
         모바일 화면에 최적화시키기 위해 메뉴는 햄버거 바를 이용해 접을 수 있도록 구현했습니다.
         해당 메뉴에서 화면 이동이 가능합니다.
+
+        해당 프로젝트는 제 4회 UMC 해커톤에서 최우수상을 수상했습니다.
         `,
   },
   {
@@ -247,7 +254,7 @@ export const ProjectList: Project[] = [
     id: 9,
     title: "Landing Page",
     skills: ["React", "TypeScript", "Styled-component", "Eslint+Prettier"],
-    description: "Landing Page",
+    description: "DLenc의 층간 소음 관련 아이템을 소개해주는 Landing Page",
     duration: "2023.08.08~2023.09.08",
     part: ["Frontend"],
     git: "https://github.com/DLenc/Randing",
@@ -256,10 +263,11 @@ export const ProjectList: Project[] = [
       Font를 편하게 사용하기 위해 CSSProperties를 사용해 스타일을 정의했습니다.
       Color를 편하게 사용하기 위해 Color를 정의한 파일을 만들어 사용했습니다.
 
-      랜딩 페이지의 최상단의 표지를 구현했습니다.
-      중간의 배너를 구현했습니다.
+      랜딩 페이지의 최상단의 표지, 중간 배너, 하단의 Footer를 구현했습니다.
 
       층간 소음이 발생할 정도의 소음이 생기면 알려주는 기능을 소개하는 섹션을 구현했습니다.
+
+      카드 리뷰 섹션에서 슬라이드 기능을 구현했습니다.
 
       디자인 상 페이지에서 빠지게 되었지만,
       react-you-tube를 사용해 유튜브 영상을 불러오는 기능을 구현했습니다.
