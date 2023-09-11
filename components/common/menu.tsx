@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
 import { NavMenu } from "@/data/Route";
@@ -8,7 +8,7 @@ type OnCloseFunction = () => void;
 
 const MobileMenu = ({ onClose }: { onClose: OnCloseFunction }) => {
   const router = useRouter();
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  // const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const onClick = (path: string) => {
     router.push(path);
@@ -17,17 +17,15 @@ const MobileMenu = ({ onClose }: { onClose: OnCloseFunction }) => {
 
   return (
     <>
-      {isMobile && (
-        <Container onClick={onClose}>
-          <MenuContainer>
-            {NavMenu.map((menu) => (
-              <Menu key={menu.path} onClick={() => onClick(menu.path)}>
-                {menu.title}
-              </Menu>
-            ))}
-          </MenuContainer>
-        </Container>
-      )}
+      <Container onClick={onClose}>
+        <MenuContainer>
+          {NavMenu.map((menu) => (
+            <Menu key={menu.path} onClick={() => onClick(menu.path)}>
+              {menu.title}
+            </Menu>
+          ))}
+        </MenuContainer>
+      </Container>
     </>
   );
 };

@@ -35,6 +35,7 @@ const Blank = styled.div`
     font-size: 1rem;
     line-height: 2rem;
     min-width: 150px;
+    width: 200px;
   }
 `;
 const Arrow = styled.div`
