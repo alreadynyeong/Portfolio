@@ -20,6 +20,9 @@ export const ProjectList: Project[] = [
     duration: "2021.11.05~2022.01.24",
     part: ["Frontend", "Server", "Plan"],
     role: `
+    역할 구분 없이 4명이서 진행한 프로젝트입니다.
+
+
     술 종류, 제품명, 재료 등을 검색해 해당 키워드가 포함되는 레시피를 조회할 수 있습니다.
     해당 레시피는 모달창으로 상세 조회가 가능합니다.
 
@@ -43,6 +46,9 @@ export const ProjectList: Project[] = [
     part: ["Frontend", "Plan"],
     git: "https://github.com/HiAlcohol/HiAlcohol_react",
     role: `
+    서버 2명과 프론트 2명으로 구성된 프로젝트입니다.
+
+
     기존에 만들어 운영했던 Hi Alcohol의 리뉴얼 버전입니다.
     기존 프로젝트의 기능을 유지하면서, 기존 프로젝트의 단점을 보완하고, 사용자의 편의성을 높이기 위해 리뉴얼하였습니다.
     React를 도입하며 프론트와 서버를 구분하였습니다.
@@ -64,6 +70,9 @@ export const ProjectList: Project[] = [
     관리자는 레시피를 수정하거나 추가할 수 있습니다.
 
     수익을 위한 카카오 adfit 광고를 추가하였습니다.
+
+
+    해당 프로젝트는 성신여자대학교 2021년 SW 경진대회에서 은상을 수상했습니다.
         `,
   },
   {
@@ -75,6 +84,9 @@ export const ProjectList: Project[] = [
     part: ["Frontend", "Plan", "Design", "Lead"],
     git: "https://github.com/GDSC-sswu-A/WithParentsFront",
     role: `
+    서버 2명, 프론트 2명으로 구성된 프로젝트입니다.
+
+
     홈에서 오늘 날짜, 가족 리스트, 오늘 복용할 약, 갤러리의 최신 사진을 조회할 수 있도록 했습니다.
 
     홈의 설정에 들어가 새로운 가족 생성이 가능하며, 가족 id와 password를 이용해 가족 등록이 가능합니다.
@@ -120,6 +132,9 @@ export const ProjectList: Project[] = [
     git: "https://github.com/alreadynyeong/GDSC-SSWU-PAGE",
     link: "https://alreadynyeong.github.io/GDSC-SSWU-PAGE/",
     role: `
+    디자인 2명과 프론트 한 명으로 구성된 프로젝트입니다.
+
+
     효율적인 개발을 위해 버튼, 네비게이션 바, 하단의 동아리 정보 등의 컴포넌트를 만들어 사용했습니다.
     
     1인 프로젝트로 진행되어 모든 화면을 구현했습니다.
@@ -131,6 +146,9 @@ export const ProjectList: Project[] = [
     요즘 트렌드에 맞게 다크모드 역시 추가했습니다.
     버튼을 통해 다크모드/라이트모드 설정이 가능하며, @/styles/Theme.ts 파일에 테마별 색을 설정했습니다.
     ThemeProvider를 사용하여 테마를 적용했습니다.
+
+
+    해당 프로젝트는 성과보고를 위해 본교 교수님들께 제출되었으며, 다음 기수 모집에 사용되었습니다. 
         `,
   },
   {
@@ -142,6 +160,9 @@ export const ProjectList: Project[] = [
     part: ["Frontend"],
     link: "https://play.google.com/store/apps/details?id=com.crystalminefrontend&hl=ko&gl=US",
     role: `
+    디자인 3명, 기획 3명, 서버 4명과 프론트 2명으로 구성된 프로젝트입니다.
+
+
     푸시알림을 받기 위한 iOS 환경에서의 설정을 했습니다.
 
     구글 AdMob을 사용하기 위해 AdMob 계정을 만들고, 광고를 추가했습니다.
@@ -154,6 +175,7 @@ export const ProjectList: Project[] = [
     채팅방에서는 채팅을 전송할 수 있고, 갤러리 및 촬영을 통해 이미지를 전송할 수 있도록 했습니다.
     실시간으로 채팅이 가능하며, 상대방이 있었는지의 여부도 확인 가능합니다.
     채팅방에서 상대를 차단하거나 나갈 수 있습니다.
+
 
     해당 프로젝트는 현재 앱스토어와 구글 플레이 스토어에 배포되어 있으며,
     6000명 이상의 사용자를 보유하고 있습니다.
@@ -169,6 +191,9 @@ export const ProjectList: Project[] = [
     part: ["Frontend"],
     git: "https://github.com/4th-Neordinary-HACKATHON-Team-A/Web",
     role: `
+    디자인 1명, 기획 1명, 서버 3명과 프론트 3명으로 구성된 프로젝트입니다.
+
+
     expo-linear-gradient를 이용한 그라데이션 버튼과 input 테마를 만들었습니다.
 
     Stack Navigation을 사용해 화면 이동이 가능합니다.
@@ -183,6 +208,7 @@ export const ProjectList: Project[] = [
     추억 이미지 결과 페이지에서는 이미지 저장 기능이 존재합니다.
     이때 react-native-easy-toast를 이용해 토스트 메시지를 생성했습니다.
 
+    
     해당 프로젝트는 제 4회 NE(O)DINARY 해커톤에서 진행된 프로젝트로, 우수상을 수상했습니다.
         `,
   },
@@ -202,6 +228,9 @@ export const ProjectList: Project[] = [
     part: ["Frontend"],
     git: "https://github.com/UMCHackathon/Hackathon_client",
     role: `
+        기획 1명, 서버 4명과 프론트 4명으로 구성된 프로젝트입니다.
+
+
         찾은 미션을 확인하고 댓글을 통해 서로의 미션을 볼 수 있습니다.
         해당 프로젝트는 해커톤에서 진행되어 시간이 부족했습니다.
         그래서 Recoil을 사용해 데이터를 보여주는 형식으로 임시 구현했습니다.
@@ -211,6 +240,7 @@ export const ProjectList: Project[] = [
 
         모바일 화면에 최적화시키기 위해 메뉴는 햄버거 바를 이용해 접을 수 있도록 구현했습니다.
         해당 메뉴에서 화면 이동이 가능합니다.
+
 
         해당 프로젝트는 제 4회 UMC 해커톤에서 최우수상을 수상했습니다.
         `,
@@ -224,8 +254,10 @@ export const ProjectList: Project[] = [
     duration: "2023.07.12~2023.08.23",
     part: ["Frontend", "Part Leader"],
     git: "https://github.com/Todis-UMC/Todis_web",
-    link: "http://todis.s3-website.ap-northeast-2.amazonaws.com/",
     role: `
+      디자인 1명, 기획 1명, 서버 4명과 프론트 5명으로 구성된 프로젝트입니다.
+
+
       EsLint+Prettier를 사용해 코드 스타일을 일관성 있게 유지했습니다.
       Font를 편하게 사용하기 위해 CSSProperties를 사용해 스타일을 정의했습니다.
 
@@ -258,12 +290,16 @@ export const ProjectList: Project[] = [
     duration: "2023.08.08~2023.09.08",
     part: ["Frontend"],
     git: "https://github.com/DLenc/Randing",
+    link: "https://dl-demoday.netlify.app/",
     role: `
+      디자인 1명과 프론트 2명으로 구성된 프로젝트입니다.
+
+
       EsLint+Prettier를 사용해 코드 스타일을 일관성 있게 유지했습니다.
       Font를 편하게 사용하기 위해 CSSProperties를 사용해 스타일을 정의했습니다.
       Color를 편하게 사용하기 위해 Color를 정의한 파일을 만들어 사용했습니다.
 
-      랜딩 페이지의 최상단의 표지, 중간 배너, 하단의 Footer를 구현했습니다.
+      랜딩 페이지의 최상단의 표지, 중간 배너, 하단 배너 및 Footer를 구현했습니다.
 
       층간 소음이 발생할 정도의 소음이 생기면 알려주는 기능을 소개하는 섹션을 구현했습니다.
 
