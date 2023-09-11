@@ -28,6 +28,7 @@ const Blank = styled.div`
   margin-top: 20px;
   margin-bottom: 15px;
   max-width: 400px;
+  min-width: 300px;
   height: 70px;
   padding: 14px;
   @media (max-width: 768px) {
@@ -58,7 +59,7 @@ export default function Home() {
       <Container>
         <div>
           <HI>
-            안녕하세요.
+            안녕하세요 :{")"}
             <div style={{ display: "flex" }}>
               <Blank>{InfoData[info]}</Blank>
               <Arrow
