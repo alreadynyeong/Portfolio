@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styled from "styled-components";
 
 import { AwardList } from "@/data/Awards";
@@ -17,7 +16,7 @@ const Title = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   padding: 30px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid;
 `;
 const Content = styled.div`
   font-size: 1rem;
@@ -80,14 +79,7 @@ const About = () => {
                   <Date>{award.date}</Date>
                   <Rank>{award.rank}</Rank>
                   <a href={`/Portfolio/project?id=${award.projectNum}`}>
-                    <Image
-                      src={
-                        "https://alreadynyeong.github.io/Portfolio/ArrowRight.png"
-                      }
-                      width={13}
-                      height={13}
-                      alt={">"}
-                    />
+                    <span style={{ fontSize: 18 }}>▹</span>
                   </a>
                 </div>
               </Content>

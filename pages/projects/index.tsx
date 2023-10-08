@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import Image from "next/image";
 import styled from "styled-components";
 
 import ProjectBox from "@/components/common/projectBox";
@@ -22,6 +21,9 @@ const ProjectContainer = styled.div`
 const Skills = styled.div`
   margin-left: 50px;
   margin-top: 20px;
+  font-size: 1.5rem;
+  align-items: center;
+  display: flex;
 `;
 
 const Skill = styled.div<SkillProps>`
@@ -49,12 +51,7 @@ const Projects = () => {
     <div>
       <div>
         <Skills>
-          <Image
-            src={"https://alreadynyeong.github.io/Portfolio/Filter.png"}
-            width={20}
-            height={20}
-            alt={""}
-          />
+          🏷️
           <Skill
             onClick={() => toggleSkill("React")}
             active={selectedSkills.includes("React")}

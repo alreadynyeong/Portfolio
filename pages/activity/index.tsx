@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styled from "styled-components";
 
 import { ActivityList } from "@/data/Activity";
@@ -16,13 +15,13 @@ const Title = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   padding: 30px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid;
 `;
 const Content = styled.div`
   font-size: 1.2rem;
   padding: 30px;
   padding-bottom: 50px;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid;
 `;
 const Date = styled.span`
   font-size: 0.8rem;
@@ -34,7 +33,7 @@ const Role = styled.div`
   margin-top: 30px;
 `;
 const Activitys = styled.div`
-  border-left: 3px solid black;
+  border-left: 3px solid;
 `;
 const Actiivty = styled.div`
   font-size: 1rem;
@@ -66,14 +65,7 @@ const Activity = () => {
                       <Project>{content.project}</Project>
                       <a href={`/Portfolio/project?id=${content.projectNum}`}>
                         {content.projectNum && (
-                          <Image
-                            src={
-                              "https://alreadynyeong.github.io/Portfolio/ArrowRight.png"
-                            }
-                            width={13}
-                            height={13}
-                            alt={">"}
-                          />
+                          <span style={{ fontSize: 10 }}>▹</span>
                         )}
                       </a>
                     </div>

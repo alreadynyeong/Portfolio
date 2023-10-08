@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import Image from "next/image";
 import router, { useRouter } from "next/router";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
@@ -18,7 +17,6 @@ const Container = styled.div`
   justify-content: space-between;
   position: fixed;
   box-shadow: 5px 0.2px 5px 1px lightgray;
-  background-color: white;
   overflow: hidden;
 `;
 const MenuContainer = styled.div`
@@ -81,12 +79,13 @@ const Nav = () => {
       <Container>
         {isMobile ? (
           <ImageBox onClick={() => setMenu(!menu)}>
-            <Image
+            MENU
+            {/* <Image
               src={"https://alreadynyeong.github.io/Portfolio/Menu.png"}
               width={20}
               height={20}
               alt={""}
-            />
+            /> */}
           </ImageBox>
         ) : (
           <MenuContainer>
@@ -110,16 +109,7 @@ const Nav = () => {
         )}
         <Title>
           <text>Lee Min Hyeong </text>
-          <div onClick={() => setShow(!show)}>
-            <Image
-              src={`https://alreadynyeong.github.io/Portfolio/Arrow${
-                show ? "Up" : "Down"
-              }.png`}
-              alt={"+"}
-              width={30}
-              height={30}
-            />
-          </div>
+          <div onClick={() => setShow(!show)}>🔎</div>
         </Title>
         {show && <Contact />}
       </Container>

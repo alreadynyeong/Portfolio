@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
 
 import { InfoData } from "@/data/Info";
 
 const Container = styled.div`
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -24,13 +24,17 @@ const HI = styled.div`
 `;
 const Blank = styled.div`
   display: inline-block;
-  border: 2px solid black;
+  border: 2px solid;
   margin-top: 20px;
   margin-bottom: 15px;
   max-width: 400px;
   min-width: 300px;
   height: 70px;
-  padding: 14px;
+  padding-left: 20px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
   @media (max-width: 768px) {
     font-size: 1rem;
     line-height: 2rem;
@@ -41,6 +45,7 @@ const Blank = styled.div`
 const Arrow = styled.div`
   padding-top: 16px;
   cursor: pointer;
+  font-size: 2rem;
   margin-left: 15px;
   margin-top: 20px;
   &:hover {
@@ -52,7 +57,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio</title>
+        <title>LeeMinHyeong</title>
         <meta name="description" content="Minhyeong's Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -68,12 +73,7 @@ export default function Home() {
                   info < InfoData.length - 1 ? setInfo(info + 1) : setInfo(0)
                 }
               >
-                <Image
-                  src="https://alreadynyeong.github.io/Portfolio/ArrowRight.png"
-                  width={30}
-                  height={30}
-                  alt={">"}
-                />
+                ▹
               </Arrow>
             </div>
             <div style={{ textAlign: "right", paddingRight: "42px" }}>
