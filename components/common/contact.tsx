@@ -6,10 +6,14 @@ const Container = styled.div`
   position: fixed;
   width: 130px;
   height: 155px;
-  border: 1px solid black;
+  border: 1px solid;
   border-radius: 20px;
   padding: 10px;
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   top: 80px;
   right: 20px;
   > div {
@@ -21,7 +25,6 @@ const Text = styled.div`
   font-weight: bold;
   cursor: pointer;
   &:hover {
-    font-size: 40px;
     color: green;
   }
 `;

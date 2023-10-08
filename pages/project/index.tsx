@@ -12,6 +12,7 @@ const Container = styled.div`
   padding: 0 10%;
   margin-top: 70px;
   margin-bottom: 150px;
+  padding-bottom: 500px;
 `;
 const Title = styled.div`
   font-size: 1.5rem;
@@ -48,7 +49,7 @@ const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid;
   margin-bottom: 30px;
   padding-right: 30px;
 `;
@@ -57,7 +58,8 @@ const RoleBox = styled.div`
   align-items: center;
   > p {
     white-space: pre-line;
-    line-height: 2;
+    line-height: 1.8;
+    margin-bottom: 50px;
   }
 `;
 const SmallTitle = styled.div`
@@ -112,7 +114,9 @@ const Detail = () => {
       <Content>
         <SmallTitle>{data?.description}</SmallTitle>
         <RoleBox>
-          <p>{data?.role}</p>
+          <p>🤼{data?.people}</p>
+          <p>🧩{data?.role}</p>
+          <p>💡{data?.result}</p>
         </RoleBox>
       </Content>
     </Container>

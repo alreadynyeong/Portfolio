@@ -8,6 +8,8 @@ export interface Project {
   duration: string;
   part: string[];
   role: string;
+  people?: string;
+  result?: string;
 }
 
 export const ProjectList: Project[] = [
@@ -20,9 +22,6 @@ export const ProjectList: Project[] = [
     duration: "2021.11.05~2022.01.24",
     part: ["Frontend", "Server", "Plan"],
     role: `
-    역할 구분 없이 4명이서 진행한 프로젝트입니다.
-
-
     술 종류, 제품명, 재료 등을 검색해 해당 키워드가 포함되는 레시피를 조회할 수 있습니다.
     해당 레시피는 모달창으로 상세 조회가 가능합니다.
 
@@ -33,8 +32,12 @@ export const ProjectList: Project[] = [
 
     배포 후 사용자를 모으기 위해 "나와 어울리는 술 테스트"를 만들었습니다.
     MBTI를 기반으로 술과 관련된 질문으로 각자 어울리는 칵테일을 추천해주는 서비스입니다.
-    해당 결과를 공유하면서 사용자를 모으고자 했습니다.
-        `,
+    해당 결과를 공유하면서 사용자를 모으고자 했습니다.`,
+    people: `
+    역할 구분 없이 4명이서 진행한 프로젝트입니다.`,
+    result: `
+    처음으로 아이디어를 실현해 서비스한 의미가 큰 프로젝트입니다.
+    개발에 흥미를 느끼게 되었고, 개발자로서의 길을 걷게 된 계기가 되었습니다.`,
   },
   {
     id: 1,
@@ -46,17 +49,13 @@ export const ProjectList: Project[] = [
     part: ["Frontend", "Plan"],
     git: "https://github.com/HiAlcohol/HiAlcohol_react",
     role: `
-    서버 2명과 프론트 2명으로 구성된 프로젝트입니다.
-
-
     기존에 만들어 운영했던 Hi Alcohol의 리뉴얼 버전입니다.
     기존 프로젝트의 기능을 유지하면서, 기존 프로젝트의 단점을 보완하고, 사용자의 편의성을 높이기 위해 리뉴얼하였습니다.
     React를 도입하며 프론트와 서버를 구분하였습니다.
-    관리자 모드를 추가하여 운영이 편리하도록 했습니다.
+    관리자 모드를 추가하여 운영이 편리하도록 했으며 관리를 위한 adfit 광고를 추가했습니다.
 
     술 종류, 제품명, 재료 등을 검색해 해당 키워드가 포함되는 레시피를 조회할 수 있습니다.
     해당 레시피는 모달창으로 상세 조회가 가능합니다.
-
     홈에서는 결정을 어려워하는 사용자를 위한 랜덤 추천 기능을 제공합니다.
 
     우리동네 주류매장 기능은 카카오 map API를 사용하여 사용자의 위치 주변의 주류매장을 조회할 수 있습니다.
@@ -66,14 +65,12 @@ export const ProjectList: Project[] = [
 
     게시글/댓글 신고 기능을 통해 부적절한 게시글/댓글을 신고할 수 있습니다.
     관리자는 신고된 게시글/댓글을 모아 볼 수 있으며, 신고된 게시글/댓글을 숨기거나 나타내게 할 수 있습니다.
-
-    관리자는 레시피를 수정하거나 추가할 수 있습니다.
-
-    수익을 위한 카카오 adfit 광고를 추가하였습니다.
-
-
+    관리자는 레시피를 수정하거나 추가할 수 있습니다.`,
+    people: `
+    서버 2명과 프론트 2명으로 구성된 프로젝트입니다.`,
+    result: `
     해당 프로젝트는 성신여자대학교 2021년 SW 경진대회에서 은상을 수상했습니다.
-        `,
+    운영에 대한 고민을 할 수 있었고, React를 사용해보며 Frontend 개발에 대한 흥미를 느낄 수 있었습니다.`,
   },
   {
     id: 2,
@@ -84,9 +81,6 @@ export const ProjectList: Project[] = [
     part: ["Frontend", "Plan", "Design", "Lead"],
     git: "https://github.com/GDSC-sswu-A/WithParentsFront",
     role: `
-    서버 2명, 프론트 2명으로 구성된 프로젝트입니다.
-
-
     홈에서 오늘 날짜, 가족 리스트, 오늘 복용할 약, 갤러리의 최신 사진을 조회할 수 있도록 했습니다.
 
     홈의 설정에 들어가 새로운 가족 생성이 가능하며, 가족 id와 password를 이용해 가족 등록이 가능합니다.
@@ -96,35 +90,39 @@ export const ProjectList: Project[] = [
     또한 부모님의 마지막 접속 시간을 조회해 자녀의 걱정을 덜고자 했습니다.
      
     가족이 함께 공유할 수 있는 공동 캘린더를 만들었습니다.
-    react-native-calendars를 사용하여 달력을 조회하고, 가족 공동 일정을 모달창을 통해 조회, 삭제, 작성, 수정이 가능합니다.
-        `,
+    react-native-calendars를 사용하여 달력을 조회하고, 가족 공동 일정을 모달창을 통해 조회, 삭제, 작성, 수정이 가능합니다.`,
+    people: `
+    서버 2명, 프론트 2명으로 구성된 프로젝트입니다.`,
+    result: `
+    Google Solution Challenge에 참가하면서 사회 문제에 대해 고민해볼 수 있었습니다.
+    Google Maps, react-native-calendars 등 다양한 라이브러리를 사용해보며, 라이브러리를 사용하는 방법에 대해 알게 되었습니다.`,
   },
-  // {
-  //   id: 3,
-  //   title: "Pycon Korea 2023",
-  //   skills: ["React", "Next", "TypeScript", "Stiches", "Eslint+Prettier"],
-  //   description:
-  //     "세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스 “파이콘”의 2023 한국 홈페이지",
-  //   duration: "2023.01.26~",
-  //   part: ["Frontend"],
-  //   git: "https://github.com/pythonkr/pyconkr-2023-frontend",
-  //   link: "https://2023.pycon.kr/",
-  //   role: `
-  //       FAQ에서 사용될 Toggle 컴포넌트를 구현했습니다.
-
-  //       파이콘에서 진행되는 세션을 조회할 수 있는 세션 목록 페이지를 구현했습니다.
-  //       `,
-  // },
+  {
+    id: 3,
+    title: "Pycon Korea 2023",
+    skills: ["Next", "TypeScript", "Stitches", "Eslint+Prettier"],
+    description:
+      "세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스 “파이콘”의 2023 한국 홈페이지",
+    duration: "2023.01.26~",
+    part: ["Frontend"],
+    git: "https://github.com/pythonkr/pyconkr-2023-frontend",
+    link: "https://2023.pycon.kr/",
+    role: `
+        FAQ에서 사용될 Toggle 컴포넌트를 구현했습니다.
+        파이콘에서 진행되는 세션을 조회할 수 있는 세션 목록 페이지를 구현했습니다.
+        `,
+    people: `
+    서버 10명, 프론트 9명으로 구성된 프로젝트입니다.`,
+    result: `
+        구현에 큰 기여는 못했지만 많은 것을 배울 수 있었던 프로젝트였습니다.
+        해당 프로젝트에 참여하며 Slack을 통해 협업하는 방법을 배울 수 있었고,
+        Next.js와 Stitches를 사용해보며 새로운 기술을 배울 수 있었습니다.
+        PullRequest를 통해 코드 리뷰를 받고, 코드 리뷰를 하며 협업하는 방법을 배울 수 있었습니다.`,
+  },
   {
     id: 4,
     title: "GDSC SSWU",
-    skills: [
-      "React",
-      "Next",
-      "TypeScript",
-      "Styled-component",
-      "Eslint+Prettier",
-    ],
+    skills: ["Next", "TypeScript", "Styled-component", "Eslint+Prettier"],
     description:
       "Google Developer Students Club의 성신여자대학교 4기 프로젝트 소개 홈페이지",
     duration: "2023.04.20~2023.05.15",
@@ -132,9 +130,6 @@ export const ProjectList: Project[] = [
     git: "https://github.com/alreadynyeong/GDSC-SSWU-PAGE",
     link: "https://alreadynyeong.github.io/GDSC-SSWU-PAGE/",
     role: `
-    디자인 2명과 프론트 한 명으로 구성된 프로젝트입니다.
-
-
     효율적인 개발을 위해 버튼, 네비게이션 바, 하단의 동아리 정보 등의 컴포넌트를 만들어 사용했습니다.
     
     1인 프로젝트로 진행되어 모든 화면을 구현했습니다.
@@ -145,11 +140,12 @@ export const ProjectList: Project[] = [
 
     요즘 트렌드에 맞게 다크모드 역시 추가했습니다.
     버튼을 통해 다크모드/라이트모드 설정이 가능하며, @/styles/Theme.ts 파일에 테마별 색을 설정했습니다.
-    ThemeProvider를 사용하여 테마를 적용했습니다.
-
-
-    해당 프로젝트는 성과보고를 위해 본교 교수님들께 제출되었으며, 다음 기수 모집에 사용되었습니다. 
-        `,
+    ThemeProvider를 사용하여 테마를 적용했습니다.`,
+    people: `
+    디자인 2명과 프론트 한 명으로 구성된 프로젝트입니다.`,
+    result: `
+    해당 프로젝트는 성과보고를 위해 본교 교수님들께 제출되었으며, 다음 기수 모집 홍보에 사용되었습니다.
+    처음으로 모바일 화면을 고려해 반응형으로 구현해보았으며 다크모드를 구현해볼 수 있는 프로젝트였습니다.`,
   },
   {
     id: 5,
@@ -160,9 +156,6 @@ export const ProjectList: Project[] = [
     part: ["Frontend"],
     link: "https://play.google.com/store/apps/details?id=com.crystalminefrontend&hl=ko&gl=US",
     role: `
-    디자인 3명, 기획 3명, 서버 4명과 프론트 2명으로 구성된 프로젝트입니다.
-
-
     푸시알림을 받기 위한 iOS 환경에서의 설정을 했습니다.
 
     구글 AdMob을 사용하기 위해 AdMob 계정을 만들고, 광고를 추가했습니다.
@@ -174,12 +167,14 @@ export const ProjectList: Project[] = [
     채팅 리스트를 조회할 수 있고, 편집 및 정렬이 가능합니다.
     채팅방에서는 채팅을 전송할 수 있고, 갤러리 및 촬영을 통해 이미지를 전송할 수 있도록 했습니다.
     실시간으로 채팅이 가능하며, 상대방이 있었는지의 여부도 확인 가능합니다.
-    채팅방에서 상대를 차단하거나 나갈 수 있습니다.
-
-
+    채팅방에서 상대를 차단하거나 나갈 수 있습니다.`,
+    people: `
+    디자인 3명, 기획 3명, 서버 4명과 프론트 2명으로 구성된 프로젝트입니다.`,
+    result: `
     해당 프로젝트는 현재 앱스토어와 구글 플레이 스토어에 배포되어 있으며,
     6000명 이상의 사용자를 보유하고 있습니다.
-        `,
+    다양한 파트와 협업을 할 수 있는 기회였으며, 기존의 코드를 이해하고 수정하는 경험을 통해 변수명과 주석의 중요성을 알게 되었습니다.
+    이슈를 사용해 브랜치를 관리하는 방법을 배웠으며, React-native와 TypeScript를 사용해보는 기회가 되었습니다.`,
   },
   {
     id: 6,
@@ -191,9 +186,6 @@ export const ProjectList: Project[] = [
     part: ["Frontend"],
     git: "https://github.com/4th-Neordinary-HACKATHON-Team-A/Web",
     role: `
-    디자인 1명, 기획 1명, 서버 3명과 프론트 3명으로 구성된 프로젝트입니다.
-
-
     expo-linear-gradient를 이용한 그라데이션 버튼과 input 테마를 만들었습니다.
 
     Stack Navigation을 사용해 화면 이동이 가능합니다.
@@ -206,11 +198,12 @@ export const ProjectList: Project[] = [
     IOS 환경에서 input 창이 가려지는 문제를 해결하기 위해 Keyboard, KeyboardEvent를 사용했습니다.
     
     추억 이미지 결과 페이지에서는 이미지 저장 기능이 존재합니다.
-    이때 react-native-easy-toast를 이용해 토스트 메시지를 생성했습니다.
-
-    
+    이때 react-native-easy-toast를 이용해 토스트 메시지를 생성했습니다.`,
+    people: `
+    디자인 1명, 기획 1명, 서버 3명과 프론트 3명으로 구성된 프로젝트입니다.`,
+    result: `
     해당 프로젝트는 제 4회 NE(O)DINARY 해커톤에서 진행된 프로젝트로, 우수상을 수상했습니다.
-        `,
+    처음으로 해커톤을 진행하면서 단기간 내에 기획, 디자인, 개발을 진행하는 경험을 할 수 있었습니다.`,
   },
   {
     id: 7,
@@ -228,10 +221,7 @@ export const ProjectList: Project[] = [
     part: ["Frontend"],
     git: "https://github.com/UMCHackathon/Hackathon_client",
     role: `
-        기획 1명, 서버 4명과 프론트 4명으로 구성된 프로젝트입니다.
-
-
-        찾은 미션을 확인하고 댓글을 통해 서로의 미션을 볼 수 있습니다.
+    찾은 미션을 확인하고 댓글을 통해 서로의 미션을 볼 수 있습니다.
         해당 프로젝트는 해커톤에서 진행되어 시간이 부족했습니다.
         그래서 Recoil을 사용해 데이터를 보여주는 형식으로 임시 구현했습니다.
         사진과 텍스트가 업로드 가능하며, 사진은 미리보기 기능이 있습니다.
@@ -240,10 +230,12 @@ export const ProjectList: Project[] = [
 
         모바일 화면에 최적화시키기 위해 메뉴는 햄버거 바를 이용해 접을 수 있도록 구현했습니다.
         해당 메뉴에서 화면 이동이 가능합니다.
-
-
-        해당 프로젝트는 제 4회 UMC 해커톤에서 최우수상을 수상했습니다.
         `,
+    people: `
+    기획 1명, 서버 4명과 프론트 4명으로 구성된 프로젝트입니다.`,
+    result: `
+    해당 프로젝트는 제 4회 UMC 해커톤에서 최우수상을 수상했습니다.
+    구현을 하면서 작은 애니메이션 하나가 프로젝트에 큰 변화를 가져온다는 것을 알게 되었습니다.`,
   },
   {
     id: 8,
@@ -255,9 +247,6 @@ export const ProjectList: Project[] = [
     part: ["Frontend", "Part Leader"],
     git: "https://github.com/Todis-UMC/Todis_web",
     role: `
-      디자인 1명, 기획 1명, 서버 4명과 프론트 5명으로 구성된 프로젝트입니다.
-
-
       EsLint+Prettier를 사용해 코드 스타일을 일관성 있게 유지했습니다.
       Font를 편하게 사용하기 위해 CSSProperties를 사용해 스타일을 정의했습니다.
 
@@ -279,8 +268,12 @@ export const ProjectList: Project[] = [
       스타일의 변경이 많은 경우 window.innerWidth를 이용해 만든 컴포넌트를 활용해 화면 크기에 따라 컴포넌트를 렌더링했습니다.
 
       react-toastify를 사용해 토스트 메시지를 구현했습니다.
-      react-spinners를 사용해 로딩 중임을 알려주는 컴포넌트를 구현했습니다.
-      `,
+      react-spinners를 사용해 로딩 중임을 알려주는 컴포넌트를 구현했습니다.`,
+    people: `
+    디자인 1명, 기획 1명, 서버 4명과 프론트 5명으로 구성된 프로젝트입니다.`,
+    result: `
+    구현이 막막했던 기능도 팀원들과 함께 고민하고 구현해나가며 프로젝트를 완성할 수 있었습니다.
+    다시 한 번 소통의 중요성을 느낄 수 있었습니다.`,
   },
   {
     id: 9,
@@ -292,9 +285,6 @@ export const ProjectList: Project[] = [
     git: "https://github.com/DLenc/Randing",
     link: "https://dl-demoday.netlify.app/",
     role: `
-      디자인 1명과 프론트 2명으로 구성된 프로젝트입니다.
-
-
       EsLint+Prettier를 사용해 코드 스타일을 일관성 있게 유지했습니다.
       Font를 편하게 사용하기 위해 CSSProperties를 사용해 스타일을 정의했습니다.
       Color를 편하게 사용하기 위해 Color를 정의한 파일을 만들어 사용했습니다.
@@ -309,5 +299,10 @@ export const ProjectList: Project[] = [
       react-you-tube를 사용해 유튜브 영상을 불러오는 기능을 구현했습니다.
       &::-webkit-scrollbar를 이용해 스크롤바의 스타일을 변경했습니다.
       `,
+    people: `
+    디자인 1명과 프론트 2명으로 구성된 프로젝트입니다.`,
+    result: `
+    평소에 경험했던, 연구소에서 직접 체험한 층간 소음 관련 프로젝트를 진행하는 것이 새로웠습니다.
+    netilify를 사용한 자동 배포를 경험할 수 있었으며 브라우저 별 폰트 적용이 달랐던 경험을 통해 폰트를 사용할 때의 주의점을 알게 되었습니다.`,
   },
 ];

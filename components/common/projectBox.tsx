@@ -17,6 +17,10 @@ const ImageBox = styled.div`
   box-shadow: 5px 5px 5px 1px lightgray;
   cursor: pointer;
   border: 1px solid lightgray;
+  transition: transform 0.7s;
+  &:hover {
+    transform: scale(1.1);
+  }
   @media (max-width: 768px) {
     width: 250px;
     height: 150px;
