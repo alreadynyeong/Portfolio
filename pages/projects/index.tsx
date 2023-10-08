@@ -20,6 +20,7 @@ const Skills = styled.div`
   font-size: 1.5rem;
   align-items: center;
   display: flex;
+  overflow-x: scroll;
 `;
 
 const Skill = styled.div<SkillProps>`
@@ -53,6 +54,12 @@ const Projects = () => {
             active={selectedSkills.includes("React")}
           >
             React
+          </Skill>
+          <Skill
+            onClick={() => toggleSkill("Next")}
+            active={selectedSkills.includes("Next")}
+          >
+            Next
           </Skill>
           <Skill
             onClick={() => toggleSkill("React-native")}

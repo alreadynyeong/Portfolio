@@ -36,6 +36,13 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 }
+@media (prefers-color-scheme: light) {
+  * {
+    background-color: #f5f5f5;
+    color: #242424;
+    border-color: #242424;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   * {
