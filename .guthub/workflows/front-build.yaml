@@ -32,4 +32,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           BRANCH: gh-pages
           FOLDER: out
-          CLEAN: true
