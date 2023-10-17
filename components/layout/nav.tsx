@@ -63,7 +63,7 @@ const ImageBox = styled.div`
   cursor: pointer;
 `;
 const Nav = () => {
-  const [show, setShow] = useState<boolean>(false);
+  const [show, setShow] = useState<boolean>(true);
   const [menu, setMenu] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
