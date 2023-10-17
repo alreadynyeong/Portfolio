@@ -20,7 +20,6 @@ jobs:
 
       - run: npm install
       - run: npm run build
-      - run: npm run export
         env:
           CI: true
           DEPLOY_TARGET: "gh-pages"
