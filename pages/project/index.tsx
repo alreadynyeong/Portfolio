@@ -11,7 +11,6 @@ const Container = styled.div`
   width: 100%;
   padding: 0 10%;
   margin-top: 70px;
-  margin-bottom: 150px;
   padding-bottom: 500px;
 `;
 const Title = styled.div`

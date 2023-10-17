@@ -4,7 +4,6 @@ import { ActivityList } from "@/data/Activity";
 const Container = styled.div`
   width: 100%;
   margin-top: 70px;
-  margin-bottom: 150px;
   padding-bottom: 500px;
 `;
 const Box = styled.div`
