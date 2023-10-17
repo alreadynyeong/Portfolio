@@ -10,13 +10,14 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  // margin-top: 100px;
   margin-left: 30px;
 `;
 const HI = styled.div`
   font-size: 1.5rem;
   font-weight: semi-bold;
   padding: 40px;
+  margin-top: 130px;
   @media (max-width: 768px) {
     font-size: 1.3rem;
     padding: 20px;
@@ -52,8 +53,15 @@ const Arrow = styled.div`
     transform: scale(1.1);
   }
 `;
+
+const Download = styled.a`
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: gray;
+`;
 export default function Home() {
   const [info, setInfo] = useState<number>(0);
+
   return (
     <>
       <Head>
@@ -64,6 +72,9 @@ export default function Home() {
       </Head>
       <Container>
         <div>
+          <Download href="https://drive.google.com/file/d/1J3MSbzoXUIJgAq4OWNblf1e7nIjD6Gon/view?usp=drive_link">
+            📠 PDF 다운로드
+          </Download>
           <HI>
             안녕하세요 :{")"}
             <div style={{ display: "flex" }}>
