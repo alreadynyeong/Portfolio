@@ -108,7 +108,7 @@ const Menu = styled.div`
       color: #2c422f;
       transform: rotateY(360deg);
     }
-    transition: all 1s ease-in-out;
+    transition: all 5s ease-in-out;
   }
 
   
