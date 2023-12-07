@@ -82,6 +82,6 @@ const Line = styled.div<LineProps>`
   }
 
   &:nth-child(3) {
-    width: ${({ isHovered }) => (isHovered === "true" ? "100%" : "400%")};
+    width: ${({ ishovered }) => (ishovered === "true" ? "100%" : "400%")};
   }
 `;
