@@ -54,11 +54,6 @@ const Arrow = styled.div`
   }
 `;
 
-const Download = styled.a`
-  cursor: pointer;
-  font-size: 0.8rem;
-  color: gray;
-`;
 export default function Home() {
   const [info, setInfo] = useState<number>(0);
 
@@ -68,13 +63,10 @@ export default function Home() {
         <title>LeeMinHyeong</title>
         <meta name="description" content="Minhyeong's Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favIcon.png" />
       </Head>
       <Container>
         <div>
-          <Download href="https://drive.google.com/file/d/1J3MSbzoXUIJgAq4OWNblf1e7nIjD6Gon/view?usp=drive_link">
-            📠 PDF 다운로드
-          </Download>
           <HI>
             안녕하세요 :{")"}
             <div style={{ display: "flex" }}>

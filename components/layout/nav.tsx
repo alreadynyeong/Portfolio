@@ -9,6 +9,39 @@ import { NavMenu } from "@/data/Route";
 import Contact from "../common/contact";
 import MobileMenu from "../common/menu";
 
+const Nav = () => {
+  const [show, setShow] = useState<boolean>(true);
+  const [menu, setMenu] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  const path = useRouter().pathname;
+
+  const mobile = useMediaQuery({ query: "(max-width: 768px)" });
+  useEffect(() => {
+    setIsMobile(mobile);
+  }, [mobile]);
+
+  return (
+    <>
+      <Container>
+        <ImageBox onClick={() => setMenu(!menu)}>MENU</ImageBox>
+        {menu && (
+          <MobileMenu
+            onClose={() => {
+              setMenu(false);
+            }}
+          />
+        )}
+        <Title>
+          <text>Lee Min Hyeong </text>
+        </Title>
+      </Container>
+    </>
+  );
+};
+
+export default Nav;
+
 const Container = styled.div`
   padding: 0px;
   width: 100%;
@@ -62,59 +95,3 @@ const ImageBox = styled.div`
   padding-left: 30px;
   cursor: pointer;
 `;
-const Nav = () => {
-  const [show, setShow] = useState<boolean>(true);
-  const [menu, setMenu] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  const path = useRouter().pathname;
-
-  const mobile = useMediaQuery({ query: "(max-width: 768px)" });
-  useEffect(() => {
-    setIsMobile(mobile);
-  }, []);
-
-  return (
-    <>
-      <Container>
-        {isMobile ? (
-          <ImageBox onClick={() => setMenu(!menu)}>
-            MENU
-            {/* <Image
-              src={"https://alreadynyeong.github.io/Portfolio/Menu.png"}
-              width={20}
-              height={20}
-              alt={""}
-            /> */}
-          </ImageBox>
-        ) : (
-          <MenuContainer>
-            {NavMenu.map((menu) => (
-              <Menu key={menu.title} onClick={() => router.push(menu.path)}>
-                {path === menu.path ? (
-                  <text style={{ color: "green" }}>{menu.title}</text>
-                ) : (
-                  <text>{menu.title}</text>
-                )}
-              </Menu>
-            ))}
-          </MenuContainer>
-        )}
-        {menu && (
-          <MobileMenu
-            onClose={() => {
-              setMenu(false);
-            }}
-          />
-        )}
-        <Title>
-          <text>Lee Min Hyeong </text>
-          <div onClick={() => setShow(!show)}>🔎</div>
-        </Title>
-        {show && <Contact />}
-      </Container>
-    </>
-  );
-};
-
-export default Nav;
