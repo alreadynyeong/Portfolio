@@ -5,7 +5,7 @@ import styled from "styled-components";
 import MobileMenu from "../common/menu";
 
 interface LineProps {
-  isHovered: boolean;
+  ishovered: string;
 }
 const Nav = () => {
   const [menu, setMenu] = useState<boolean>(false);
@@ -19,9 +19,9 @@ const Nav = () => {
           onMouseLeave={() => setIsHovered(false)}
           onMouseEnter={() => setIsHovered(true)}
         >
-          <Line isHovered={isHovered} />
-          <Line isHovered={isHovered} />
-          <Line isHovered={isHovered} />
+          <Line ishovered={isHovered.toString()} />
+          <Line ishovered={isHovered.toString()} />
+          <Line ishovered={isHovered.toString()} />
         </ImageBox>
         {menu && (
           <MobileMenu
@@ -74,14 +74,14 @@ const Line = styled.div<LineProps>`
   }
 
   &:nth-child(1) {
-    width: ${({ isHovered }) => (isHovered ? "400%" : "400%")};
+    width: ${({ ishovered }) => (ishovered === "true" ? "400%" : "400%")};
   }
 
   &:nth-child(2) {
-    width: ${({ isHovered }) => (isHovered ? "300%" : "400%")};
+    width: ${({ ishovered }) => (ishovered === "true" ? "300%" : "400%")};
   }
 
   &:nth-child(3) {
-    width: ${({ isHovered }) => (isHovered ? "100%" : "400%")};
+    width: ${({ isHovered }) => (isHovered === "true" ? "100%" : "400%")};
   }
 `;

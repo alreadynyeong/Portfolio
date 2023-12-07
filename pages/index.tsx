@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { HomeData } from "@/data/Home";
 
 type ActiveProps = {
-  active: boolean;
+  active: number;
 };
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <Container>
         {HomeData.map((section) => (
-          <Section active={1 === section.id} key={section.id}>
+          <Section active={section.id} key={section.id}>
             <Arrow>↓</Arrow>
             <NameBox>
               {section.text.map((text, textIndex) => (
@@ -48,10 +48,11 @@ const Section = styled.div<ActiveProps>`
   align-items: center;
   width: 100%;
   justify-content: flex-start;
-  background-color: ${(props) => (props.active ? "#2c422f" : "transparent")};
+  background-color: ${(props) =>
+    props.active === 1 ? "#2c422f" : "transparent"};
   > div {
     > div {
-      color: ${(props) => (props.active ? "#f5f5f5" : "#2c422f")};
+      color: ${(props) => (props.active === 1 ? "#f5f5f5" : "#2c422f")};
     }
   }
 `;
