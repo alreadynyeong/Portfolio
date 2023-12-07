@@ -147,4 +147,7 @@ const Download = styled.a`
   border-radius: 5px;
   padding: 5px;
   color: #2c422f;
+  @media (prefers-color-scheme: dark) {
+    color: #f5f5f5;
+  }
 `;

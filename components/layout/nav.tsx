@@ -4,6 +4,9 @@ import styled from "styled-components";
 
 import MobileMenu from "../common/menu";
 
+interface LineProps {
+  isHovered: boolean;
+}
 const Nav = () => {
   const [menu, setMenu] = useState<boolean>(false);
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -43,6 +46,7 @@ const Container = styled.div`
   position: fixed;
   overflow: hidden;
   background-color: transparent;
+  z-index: 10000;
 `;
 const ImageBox = styled.div`
   display: flex;
@@ -57,14 +61,16 @@ const ImageBox = styled.div`
   padding: 20px;
 `;
 
-const Line = styled.div<{ isHovered: boolean }>`
+const Line = styled.div<LineProps>`
   width: 50px;
-  height: 3px;
+  height: 5px;
   background-color: #2c422f;
+  border: 1px solid #f5f5f5;
   margin: 5px;
   transition: all 0.3s ease-in-out;
   @media (prefers-color-scheme: dark) {
     background-color: #f5f5f5;
+    border: 1px solid #2c422f;
   }
 
   &:nth-child(1) {
