@@ -18,7 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <Head>
-        <title>Portfolio</title>
+        <title>LeeMinHyeong</title>
+        <meta name="description" content="Minhyeong's Portfolio" />
+        <link rel="icon" href="/favIcon.png" />
       </Head>
       <Nav />
       <main className={notoSansKr.className}>
