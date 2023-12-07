@@ -6,11 +6,20 @@ import MobileMenu from "../common/menu";
 
 const Nav = () => {
   const [menu, setMenu] = useState<boolean>(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <>
       <Container>
-        <ImageBox onClick={() => setMenu(!menu)}>MENU</ImageBox>
+        <ImageBox
+          onClick={() => setMenu(!menu)}
+          onMouseLeave={() => setIsHovered(false)}
+          onMouseEnter={() => setIsHovered(true)}
+        >
+          <Line isHovered={isHovered} />
+          <Line isHovered={isHovered} />
+          <Line isHovered={isHovered} />
+        </ImageBox>
         {menu && (
           <MobileMenu
             onClose={() => {
@@ -18,9 +27,6 @@ const Nav = () => {
             }}
           />
         )}
-        <Title>
-          <text>Lee Min Hyeong </text>
-        </Title>
       </Container>
     </>
   );
@@ -35,28 +41,41 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   position: fixed;
-  box-shadow: 5px 0.2px 5px 1px lightgray;
   overflow: hidden;
-`;
-const Title = styled.div`
-  display: flex;
-  align-items: center;
-  padding-right: 30px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  gap: 10px;
-  > div {
-    padding-top: 10px;
-  }
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
+  background-color: transparent;
 `;
 const ImageBox = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 30px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  flex-direction: column;
+  align-items: flex-start;
   cursor: pointer;
+  padding: 20px;
+`;
+
+const Line = styled.div<{ isHovered: boolean }>`
+  width: 50px;
+  height: 3px;
+  background-color: #2c422f;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+  @media (prefers-color-scheme: dark) {
+    background-color: #f5f5f5;
+  }
+
+  &:nth-child(1) {
+    width: ${({ isHovered }) => (isHovered ? "400%" : "400%")};
+  }
+
+  &:nth-child(2) {
+    width: ${({ isHovered }) => (isHovered ? "300%" : "400%")};
+  }
+
+  &:nth-child(3) {
+    width: ${({ isHovered }) => (isHovered ? "100%" : "400%")};
+  }
 `;
