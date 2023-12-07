@@ -1,10 +1,74 @@
+import Head from "next/head";
 import styled from "styled-components";
 
 import { ActivityList } from "@/data/Activity";
+
+const Activity = () => {
+  return (
+    <>
+      <Head>
+        <title>ACTIVITY</title>
+        <meta name="description" content="Minhyeong's Activity" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/public/favIcon.png" />
+      </Head>
+      <Container>
+        <Top>ACTIVITY</Top>
+        <Box>
+          <Title>활동</Title>
+          {ActivityList.slice()
+            .reverse()
+            .map((activity) => (
+              <Content key={activity.id}>
+                [ {activity.title} ] <Date>{activity.date}</Date>
+                <Role>{activity.role}</Role>
+                <Activitys>
+                  {activity.content.map((content) => (
+                    <Actiivty key={content.id}>
+                      {content.text}
+                      <div>
+                        <a href={`/Portfolio/project?id=${content.projectNum}`}>
+                          <Project>{content.project}</Project>
+                        </a>
+                      </div>
+                    </Actiivty>
+                  ))}
+                </Activitys>
+              </Content>
+            ))}
+        </Box>
+      </Container>
+    </>
+  );
+};
+
+export default Activity;
+
 const Container = styled.div`
   width: 100%;
-  margin-top: 70px;
-  padding-bottom: 500px;
+`;
+const Top = styled.div`
+  font-size: 9rem;
+  font-weight: bold;
+  padding-right: 10%;
+  text-align: right;
+  letter-spacing: -0.5rem;
+  transition: all 0.5s;
+  &:hover {
+    letter-spacing: 2rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 5rem;
+    &:hover {
+      letter-spacing: 1rem;
+    }
+  }
+  @media (max-width: 425px) {
+    font-size: 3rem;
+    &:hover {
+      letter-spacing: 0.5rem;
+    }
+  }
 `;
 const Box = styled.div`
   width: 80%;
@@ -22,6 +86,9 @@ const Content = styled.div`
   padding: 30px;
   padding-bottom: 50px;
   border-bottom: 1px solid;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 const Date = styled.span`
   font-size: 0.8rem;
@@ -45,38 +112,3 @@ const Project = styled.span`
   margin-right: 7px;
   color: green;
 `;
-
-const Activity = () => {
-  return (
-    <Container>
-      <Box>
-        <Title>활동</Title>
-        {ActivityList.slice()
-          .reverse()
-          .map((activity) => (
-            <Content key={activity.id}>
-              [ {activity.title} ] <Date>{activity.date}</Date>
-              <Role>{activity.role}</Role>
-              <Activitys>
-                {activity.content.map((content) => (
-                  <Actiivty key={content.id}>
-                    {content.text}
-                    <div>
-                      <Project>{content.project}</Project>
-                      <a href={`/Portfolio/project?id=${content.projectNum}`}>
-                        {content.projectNum && (
-                          <span style={{ fontSize: 10 }}>▹</span>
-                        )}
-                      </a>
-                    </div>
-                  </Actiivty>
-                ))}
-              </Activitys>
-            </Content>
-          ))}
-      </Box>
-    </Container>
-  );
-};
-
-export default Activity;
