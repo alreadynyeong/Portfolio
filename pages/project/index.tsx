@@ -1,11 +1,76 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useMediaQuery } from "react-responsive";
+import Head from "next/head";
 import styled from "styled-components";
 
 import Parts from "@/components/common/part";
 import Skils from "@/components/common/skils";
 import { ProjectList } from "@/data/Project";
+
+const Detail = () => {
+  const router = useRouter();
+  const id = Number(router.query.id) || router.query?.id;
+  const data = ProjectList.find((p) => p.id == id);
+
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+  if (!data) {
+    return <div>프로젝트를 찾을 수 없습니다.</div>;
+  }
+  return (
+    <>
+      <Head>
+        <title>PJOJECT</title>
+        <meta name="description" content="Minhyeong's Project" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="../../public/favIcon.png" />
+      </Head>
+      <Container>
+        <Top>
+          <Title>
+            {data?.title} <Date>{data?.duration}</Date>
+          </Title>
+          <div>
+            {data.git && (
+              <a href={data.git} target="_blank" rel="noopener noreferrer">
+                GIT
+              </a>
+            )}
+            {data.git && data.link && <span> | </span>}
+            {data.link && (
+              <a href={data.link} target="_blank" rel="noopener noreferrer">
+                LINK
+              </a>
+            )}
+          </div>
+        </Top>
+        <Parts part={data?.part} />
+        <Skils skills={data?.skills} />
+        {!(data?.id === 10) && (
+          <ImageBox>
+            <Image
+              src={`https://alreadynyeong.github.io/Portfolio/projects/${data?.id}.png`}
+              width={isMobile ? 300 : 500}
+              height={isMobile ? 200 : 300}
+              alt={"사진 준비중"}
+            />
+          </ImageBox>
+        )}
+        <Content>
+          <SmallTitle>{data?.description}</SmallTitle>
+          <RoleBox>
+            <p>🤼{data?.people}</p>
+            <p>🧩{data?.role}</p>
+            <p>💡{data?.result}</p>
+          </RoleBox>
+        </Content>
+      </Container>
+    </>
+  );
+};
+
+export default Detail;
 
 const Container = styled.div`
   width: 100%;
@@ -70,56 +135,3 @@ const SmallTitle = styled.div`
   color: gray;
   border-bottom: 1px solid gray;
 `;
-const Detail = () => {
-  const router = useRouter();
-  const id = Number(router.query.id) || router.query?.id;
-  const data = ProjectList.find((p) => p.id == id);
-
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
-  if (!data) {
-    return <div>프로젝트를 찾을 수 없습니다.</div>;
-  }
-  return (
-    <Container>
-      <Top>
-        <Title>
-          {data?.title} <Date>{data?.duration}</Date>
-        </Title>
-        <div>
-          {data.git && (
-            <a href={data.git} target="_blank" rel="noopener noreferrer">
-              GIT
-            </a>
-          )}
-          {data.git && data.link && <span> | </span>}
-          {data.link && (
-            <a href={data.link} target="_blank" rel="noopener noreferrer">
-              LINK
-            </a>
-          )}
-        </div>
-      </Top>
-      <Parts part={data?.part} />
-      <Skils skills={data?.skills} />
-      <ImageBox>
-        <Image
-          src={`https://alreadynyeong.github.io/Portfolio/projects/${data?.id}.png`}
-          width={isMobile ? 300 : 500}
-          height={isMobile ? 200 : 300}
-          alt={""}
-        />
-      </ImageBox>
-      <Content>
-        <SmallTitle>{data?.description}</SmallTitle>
-        <RoleBox>
-          <p>🤼{data?.people}</p>
-          <p>🧩{data?.role}</p>
-          <p>💡{data?.result}</p>
-        </RoleBox>
-      </Content>
-    </Container>
-  );
-};
-
-export default Detail;

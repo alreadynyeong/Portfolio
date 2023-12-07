@@ -16,7 +16,7 @@ export default function Home() {
         <title>LeeMinHyeong</title>
         <meta name="description" content="Minhyeong's Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="public/favIcon.png" />
+        <link rel="icon" href="/public/favIcon.png" />
       </Head>
       <Container>
         {HomeData.map((section) => (

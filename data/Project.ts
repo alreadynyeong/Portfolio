@@ -305,4 +305,40 @@ export const ProjectList: Project[] = [
     평소에 경험했던, 연구소에서 직접 체험한 층간 소음 관련 프로젝트를 진행하는 것이 새로웠습니다.
     netilify를 사용한 자동 배포를 경험할 수 있었으며 브라우저 별 폰트 적용이 달랐던 경험을 통해 폰트를 사용할 때의 주의점을 알게 되었습니다.`,
   },
+  {
+    id: 10,
+    title: "ITer",
+    skills: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "Stitches",
+      "Eslint+Prettier",
+      "react-query",
+    ],
+    description: "삶의 질을 상승시켜주는 IT제품 리뷰 서비스",
+    duration: "2023.09.19~진행중",
+    part: ["Frontend"],
+    git: "https://github.com/BETTER-iTER",
+
+    role: `
+    Stitches를 사용해 스타일을 정의했습니다. vite-plugin-svgr를 사용해 svg를 컴포넌트로 사용했습니다.
+    
+    모달창, 토스트, 상단바, 에러창, 선택형 input, bottom sheet 등의 컴포넌트를 만들어 사용했습니다.
+
+    react-query의 useQuery를 사용해 데이터를 불러오고, useMutation을 사용해 데이터를 수정했습니다.
+
+    카테고리, 검색어, 최신검색어, 추천검색어를 통한 검색을 구현했습니다.
+    최신검색어는 localStorage를 사용해 최대 7개까지 저장했습니다.
+
+    리뷰의 상세보기 페이지를 구현하면서 Swiper를 사용해 이미지 슬라이드를 구현했습니다.
+    홈에서는 시간에 따른 자동 슬라이드를 구현했습니다.
+
+    이메일과 추가정보를 입력해 회원가입을 구현했습니다.
+
+    관심카테고리, 좋아요한 리뷰, 스크랩 리뷰, 내가 쓴 리뷰 등 망각 곡선을 고려한 기능을 구현했습니다.
+    `,
+    people: `
+  디자인 1명, 기획 1명, 서버 2명과 프론트 2명으로 구성된 프로젝트입니다.`,
+  },
 ];

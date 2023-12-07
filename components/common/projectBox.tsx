@@ -4,51 +4,123 @@ import styled from "styled-components";
 
 import type { Project } from "@/data/Project";
 
-const Container = styled.div`
-  width: fit-content;
-  margin: 50px;
-`;
-
-const ImageBox = styled.div`
-  width: 300px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 1px lightgray;
-  cursor: pointer;
-  border: 1px solid lightgray;
-  transition: transform 0.7s;
-  &:hover {
-    transform: scale(1.1);
-  }
-  @media (max-width: 768px) {
-    width: 250px;
-    height: 150px;
-  }
-`;
-
-const Title = styled.div`
-  font-size: 1.2rem;
-  font-weight: semi-bold;
-  margin-top: 10px;
-  text-align: center;
-`;
 const ProjectBox = ({ project }: { project: Project }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <Container>
       <ImageBox>
-        <Image
-          src={`https://alreadynyeong.github.io/Portfolio/projects/${project.id}.png`}
-          width={isMobile ? 250 : 300}
-          height={isMobile ? 150 : 200}
-          alt={""}
-        />
+        {!(project.id === 10) && (
+          <Image
+            src={`https://alreadynyeong.github.io/Portfolio/projects/${project.id}.png`}
+            width={isMobile ? 250 : 400}
+            height={isMobile ? 150 : 280}
+            alt={""}
+          />
+        )}
       </ImageBox>
 
-      <Title>[ {project.title} ]</Title>
+      <Content>
+        <Title>{project.title}</Title>
+        <Description>{project.description}</Description>
+        <Skills>
+          {project.skills.map((skill) => (
+            <Skill key={skill}>{skill}</Skill>
+          ))}
+        </Skills>
+      </Content>
     </Container>
   );
 };
 
 export default ProjectBox;
+
+const Container = styled.div`
+  margin: 50px;
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    width: 400px;
+  }
+  @media (max-width: 400px) {
+    display: block;
+    width: 250px;
+  }
+`;
+
+const ImageBox = styled.div`
+  width: 400px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  &:hover {
+    rotate: 10deg;
+    transition: 0.5s;
+  }
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 150px;
+  }
+  @media (max-width: 400px) {
+    margin-bottom: 10px;
+  }
+`;
+
+const Content = styled.div`
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+    padding-left: 10px;
+  }
+  @media (max-width: 400px) {
+    width: 250px;
+  }
+`;
+
+const Title = styled.div`
+  height: fit-content;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: right;
+  background-color: transparent;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;
+
+const Description = styled.div`
+  height: fit-content;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-align: right;
+  background-color: transparent;
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
+`;
+
+const Skills = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background-color: transparent;
+  margin-top: 10px;
+`;
+
+const Skill = styled.div`
+  font-size: 0.7rem;
+  margin: 2px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  @media (max-width: 768px) {
+    font-size: 0.6rem;
+  }
+`;
