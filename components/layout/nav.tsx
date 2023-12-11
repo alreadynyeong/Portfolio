@@ -5,31 +5,42 @@ import styled from "styled-components";
 import MobileMenu from "../common/menu";
 
 interface LineProps {
-  ishovered: string;
+  ishovered?: string;
+  isClicked?: string;
 }
 const Nav = () => {
-  const [menu, setMenu] = useState<boolean>(false);
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
 
   return (
     <>
       <Container>
         <ImageBox
-          onClick={() => setMenu(!menu)}
-          onMouseLeave={() => setIsHovered(false)}
           onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onClick={() => setIsClicked(!isClicked)}
+          isClicked={isClicked.toString()}
+          ishovered={isHovered.toString()}
         >
-          <Line ishovered={isHovered.toString()} />
-          <Line ishovered={isHovered.toString()} />
-          <Line ishovered={isHovered.toString()} />
-        </ImageBox>
-        {menu && (
-          <MobileMenu
-            onClose={() => {
-              setMenu(false);
-            }}
+          <Line
+            ishovered={isHovered.toString()}
+            isClicked={isClicked.toString()}
           />
-        )}
+          {!isClicked && (
+            <>
+              <Line ishovered={isHovered.toString()} />
+              <Line ishovered={isHovered.toString()} />
+            </>
+          )}
+          {isClicked && (
+            <MobileMenu
+              onClose={() => {
+                setIsHovered(false);
+                setIsClicked(false);
+              }}
+            />
+          )}
+        </ImageBox>
       </Container>
     </>
   );
@@ -40,7 +51,6 @@ export default Nav;
 const Container = styled.div`
   padding: 0px;
   width: 100%;
-  height: 100px;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -48,17 +58,20 @@ const Container = styled.div`
   background-color: transparent;
   z-index: 10000;
 `;
-const ImageBox = styled.div`
+const ImageBox = styled.div<LineProps>`
   display: flex;
-  font-size: 1.5rem;
   background-color: transparent;
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
   flex-direction: column;
   align-items: flex-start;
   cursor: pointer;
   padding: 20px;
+  background-color: ${({ isClicked }) =>
+    isClicked === "true" ? "#2c422f" : "transparent"};
+  width: ${({ isClicked, ishovered }) =>
+    isClicked === "true" || ishovered === "true" ? "100%" : "fit-content"};
+  height: ${({ isClicked }) =>
+    isClicked === "true" ? "100vh" : "fit-content"};
+  overflow: none;
 `;
 
 const Line = styled.div<LineProps>`
@@ -74,14 +87,28 @@ const Line = styled.div<LineProps>`
   }
 
   &:nth-child(1) {
-    width: ${({ ishovered }) => (ishovered === "true" ? "400%" : "400%")};
+    margin-left: ${({ isClicked }) => (isClicked === "true" ? "-20px" : "5px")};
+    width: ${({ ishovered }) => (ishovered === "true" ? "1500px" : "50px")};
+    animation: ${({ isClicked }) =>
+      isClicked === "true" ? "down 0.5s ease-in-out" : "none"};
+  }
+
+  @keyframes down {
+    0% {
+      transform: translateY(0deg) rotate(0deg);
+      margin-bottom: 0px;
+    }
+    100% {
+      transform: translateY(180deg) rotate(180deg);
+      margin-bottom: 100vh;
+    }
   }
 
   &:nth-child(2) {
-    width: ${({ ishovered }) => (ishovered === "true" ? "300%" : "400%")};
+    width: ${({ ishovered }) => (ishovered === "true" ? "0" : "50px")};
   }
 
   &:nth-child(3) {
-    width: ${({ ishovered }) => (ishovered === "true" ? "100%" : "400%")};
+    width: ${({ ishovered }) => (ishovered === "true" ? "0" : "50px")};
   }
 `;
