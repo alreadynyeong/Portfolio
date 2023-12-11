@@ -47,11 +47,15 @@ export default MobileMenu;
 const Container = styled.div`
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  overflow-y: scroll;
   z-index: 100;
   display: flex;
   flex-direction: column;
   margin-top: 100px;
+  @media (max-width: 400px) {
+    margin-top: 0;
+  }
   padding: 40px;
   background-color: #2c422f;
   > div {
@@ -114,6 +118,9 @@ const Menu = styled.div`
     font-size: 5rem;
     border-bottom: none;
     padding-left: 30px;
+  }
+  @media (max-width: 400px) {
+    font-size: 2rem;
   }
 
   > div {

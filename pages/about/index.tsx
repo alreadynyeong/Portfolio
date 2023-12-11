@@ -32,7 +32,7 @@ const About = () => {
             .reverse()
             .map((award) => (
               <>
-                <Content key={award.title}>
+                <Content key={award.id}>
                   <a href={`/Portfolio/project?id=${award.projectNum}`}>
                     <RankBox>
                       <div>{award.title}</div>
