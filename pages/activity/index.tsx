@@ -53,9 +53,21 @@ const Top = styled.div`
   padding-right: 10%;
   text-align: right;
   letter-spacing: -0.5rem;
-  transition: all 0.5s;
   &:hover {
     letter-spacing: 2rem;
+  }
+  transition: all 0.5s;
+  animation: Top 3s;
+  animation-fill-mode: forwards;
+  @keyframes Top {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
   @media (max-width: 768px) {
     font-size: 5rem;

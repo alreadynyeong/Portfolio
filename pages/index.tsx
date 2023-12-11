@@ -65,7 +65,17 @@ const NameBox = styled.div`
   height: 100vh;
   padding: 120px 50px 0 50px;
   background-color: transparent;
-  transition: background-color 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
 `;
 
 const Name = styled.div`
