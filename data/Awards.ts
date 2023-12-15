@@ -11,7 +11,8 @@ export interface Award {
 export const AwardList: Award[] = [
   {
     id: 0,
-    title: "2022 SSWU 소프트웨어 경진대회",
+    // title: "2022 SSWU 소프트웨어 경진대회",
+    title: "2022 교내 소프트웨어 경진대회",
     date: "2022.09.15",
     rank: "은상",
     role: "기획/Frontend 개발",

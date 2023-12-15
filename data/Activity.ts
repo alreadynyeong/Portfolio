@@ -16,14 +16,17 @@ interface Content {
 export const ActivityList: Activity[] = [
   {
     id: 0,
-    title: "GDSC SSWU 4th",
+    // title: "GDSC SSWU 4th",
+    title: "GDSC 4th",
     date: "2022.09~2023.06",
     role: "교육팀 팀장",
     content: [
       {
         id: 0,
-        text: "GDSC SSWU 4기 홈페이지 제작",
-        project: "GDSC SSWU",
+        // text: "GDSC SSWU 4기 홈페이지 제작",
+        // project: "GDSC SSWU",
+        text: "GDSC 4기 교내 홈페이지 제작",
+        project: "GDSC PAGE",
         projectNum: 4,
       },
       {
@@ -62,7 +65,7 @@ export const ActivityList: Activity[] = [
   },
   {
     id: 3,
-    title: "UMC 4th SSWU",
+    title: "UMC 4th",
     date: "2023.03~",
     role: "Member",
     content: [

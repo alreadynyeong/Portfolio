@@ -68,8 +68,11 @@ export const ProjectList: Project[] = [
     관리자는 레시피를 수정하거나 추가할 수 있습니다.`,
     people: `
     서버 2명과 프론트 2명으로 구성된 프로젝트입니다.`,
+    // result: `
+    // 해당 프로젝트는 성신여자대학교 2022년 SW 경진대회에서 은상을 수상했습니다.
+    // 운영에 대한 고민을 할 수 있었고, React를 사용해보며 Frontend 개발에 대한 흥미를 느낄 수 있었습니다.`,
     result: `
-    해당 프로젝트는 성신여자대학교 2021년 SW 경진대회에서 은상을 수상했습니다.
+    해당 프로젝트는 2022년 교내 SW 경진대회에서 은상을 수상했습니다.
     운영에 대한 고민을 할 수 있었고, React를 사용해보며 Frontend 개발에 대한 흥미를 느낄 수 있었습니다.`,
   },
   {
@@ -121,10 +124,13 @@ export const ProjectList: Project[] = [
   },
   {
     id: 4,
-    title: "GDSC SSWU",
+    // title: "GDSC SSWU",
+    title: "GDSC PAGE",
     skills: ["Next", "TypeScript", "Styled-component", "Eslint+Prettier"],
+    // description:
+    //   "Google Developer Students Club의 성신여자대학교 4기 프로젝트 소개 홈페이지",
     description:
-      "Google Developer Students Club의 성신여자대학교 4기 프로젝트 소개 홈페이지",
+      "Google Developer Students Club의 교내 4기 프로젝트 소개 홈페이지",
     duration: "2023.04.20~2023.05.15",
     part: ["Frontend"],
     git: "https://github.com/alreadynyeong/GDSC-SSWU-PAGE",
@@ -151,7 +157,8 @@ export const ProjectList: Project[] = [
     id: 5,
     title: "수정광산",
     skills: ["React-native", "cli", "TypeScript", "StyleSheet"],
-    description: "성신여자대학교 학생들을 위한 자체 커뮤니티 어플",
+    // description: "성신여자대학교 학생들을 위한 자체 커뮤니티 어플",
+    description: "나의 대학교 학생들을 위한 자체 커뮤니티 어플",
     duration: "2022.10.13 ~",
     part: ["Frontend"],
     link: "https://play.google.com/store/apps/details?id=com.crystalminefrontend&hl=ko&gl=US",
