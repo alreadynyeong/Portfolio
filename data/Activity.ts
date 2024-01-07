@@ -16,17 +16,14 @@ interface Content {
 export const ActivityList: Activity[] = [
   {
     id: 0,
-    // title: "GDSC SSWU 4th",
-    title: "GDSC 4th",
+    title: "GDSC SSWU 4th",
     date: "2022.09~2023.06",
     role: "교육팀 팀장",
     content: [
       {
         id: 0,
-        // text: "GDSC SSWU 4기 홈페이지 제작",
-        // project: "GDSC SSWU",
-        text: "GDSC 4기 교내 홈페이지 제작",
-        project: "GDSC PAGE",
+        text: "GDSC SSWU 4기 홈페이지 제작",
+        project: "GDSC SSWU",
         projectNum: 4,
       },
       {
@@ -112,4 +109,22 @@ export const ActivityList: Activity[] = [
       },
     ],
   },
+  // {
+  //   id: 5,
+  //   title: "UMC 5th",
+  //   date: "2023.09~",
+  //   role: "Server Lead",
+  //   content: [
+  //     {
+  //       id: 0,
+  //       text: "5회 UMC 해커톤 우수상",
+  //       project: "Buddy-U",
+  //     },
+  //     {
+  //       id: 1,
+  //       text: "프로젝트 참여",
+  //       project: "My Place",
+  //     },
+  //   ],
+  // },
 ];

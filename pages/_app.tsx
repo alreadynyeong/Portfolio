@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import Nav from "@/components/layout/nav";
 import "@/styles/globals.css";
+import favIcon from "@/public/favIcon.ico";
 import { GlobalStyle } from "@/styles/globalStyle";
 
 import type { AppProps } from "next/app";
@@ -20,7 +21,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>LeeMinHyeong</title>
         <meta name="description" content="Minhyeong's Portfolio" />
-        <link rel="icon" href="/favIcon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href={favIcon.src} />
       </Head>
       <Nav />
       <main className={notoSansKr.className}>

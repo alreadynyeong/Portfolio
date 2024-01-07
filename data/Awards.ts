@@ -11,8 +11,7 @@ export interface Award {
 export const AwardList: Award[] = [
   {
     id: 0,
-    // title: "2022 SSWU 소프트웨어 경진대회",
-    title: "2022 교내 소프트웨어 경진대회",
+    title: "2022 SSWU 소프트웨어 경진대회",
     date: "2022.09.15",
     rank: "은상",
     role: "기획/Frontend 개발",
@@ -37,4 +36,13 @@ export const AwardList: Award[] = [
     project: "Green Quest",
     projectNum: 7,
   },
+  // {
+  //   id: 3,
+  //   title: "제 5회 UMC 해커톤",
+  //   date: "2024.01.03",
+  //   rank: "우수상",
+  //   role: "Frontend 개발",
+  //   project: "Buddy-U",
+  //   projectNum: 2,
+  // },
 ];

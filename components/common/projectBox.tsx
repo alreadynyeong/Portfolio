@@ -7,7 +7,7 @@ import type { Project } from "@/data/Project";
 const ProjectBox = ({ project }: { project: Project }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
-    <Container>
+    <Container main={project.main === true}>
       <ImageBox>
         {!(project.id === 10) && (
           <Image
@@ -34,18 +34,24 @@ const ProjectBox = ({ project }: { project: Project }) => {
 
 export default ProjectBox;
 
-const Container = styled.div`
+const Container = styled.div<{ main: boolean }>`
   margin: 50px;
   display: flex;
   width: 600px;
   justify-content: space-between;
   @media (max-width: 768px) {
     width: 400px;
+    height: 210px;
   }
   @media (max-width: 400px) {
     display: block;
-    width: 250px;
+    width: 280px;
+    height: 310px;
   }
+  border: ${(props) =>
+    props.main ? "2px dashed #2c422f" : "2px solid #f5f5f5"};
+  padding: 10px;
+  border-radius: 10px;
 `;
 
 const ImageBox = styled.div`
