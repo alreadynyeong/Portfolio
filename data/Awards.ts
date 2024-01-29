@@ -36,13 +36,13 @@ export const AwardList: Award[] = [
     project: "Green Quest",
     projectNum: 7,
   },
-  // {
-  //   id: 3,
-  //   title: "제 5회 UMC 해커톤",
-  //   date: "2024.01.03",
-  //   rank: "우수상",
-  //   role: "Frontend 개발",
-  //   project: "Buddy-U",
-  //   projectNum: 2,
-  // },
+  {
+    id: 3,
+    title: "제 5회 UMC 해커톤",
+    date: "2024.01.03",
+    rank: "우수상",
+    role: "Frontend 개발",
+    project: "Buddy-U",
+    projectNum: 11,
+  },
 ];

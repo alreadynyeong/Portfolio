@@ -17,8 +17,8 @@ const About = () => {
         <Box>
           <Title>학력</Title>
           <Content>
-            {/* 성신여자대학교 컴퓨터공학과<Date>2019.03 ~</Date> */}
-            컴퓨터공학과<Date>2019.03 ~</Date>
+            성신여자대학교 컴퓨터공학과 졸업<Date>2019.03 ~ 2024.02</Date>
+            {/* 컴퓨터공학과<Date>2019.03 ~</Date> */}
           </Content>
         </Box>
         <Box>

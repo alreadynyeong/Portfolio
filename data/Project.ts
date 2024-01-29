@@ -17,7 +17,7 @@ export const ProjectList: Project[] = [
   {
     id: 0,
     title: "Hi Alcohol",
-    skills: ["Node.js", "JavaScript", "HTML", "CSS"],
+    skills: ["Node.js", "express", "JavaScript", "HTML", "CSS"],
     description:
       "가진 재료로 만들 수 있는 칵테일의 레시피 제공 및 Alcohol lover들을 위한 커뮤니티",
     duration: "2021.11.05~2022.01.24",
@@ -344,5 +344,51 @@ export const ProjectList: Project[] = [
     `,
     people: `
   디자인 1명, 기획 1명, 서버 2명과 프론트 2명으로 구성된 프로젝트입니다.`,
+  },
+  {
+    id: 11,
+    title: "Buddy-U",
+    skills: ["React", "JavaScript", "Styled-component", "Eslint+Prettier"],
+    description: "논리적 사고자, INTP를 위한 친구 관리 서비스",
+    duration: "2024.01.02~2024.01.03",
+    part: ["Frontend"],
+    git: "https://github.com/UMC-TEAM-U/Front",
+
+    role: `
+     EsLint+Prettier를 사용해 코드 스타일을 일관성 있게 유지했습니다.
+     폰트 설정과 Netlify를 사용한 자동 배포를 구현했습니다.
+
+     리스트 박스 컴포넌트를 구현했습니다.
+
+     선물 관리, 버디 상세화면을 구현했습니다.
+
+     react-calendar 라이브러리를 사용하며 css를 수정해 원하는 디자인으로 구현했습니다.
+
+     react-spring-bottom-sheet를 사용해 일정을 추가하는 bottom sheet를 구현했습니다.
+     `,
+    people: `
+  디자인 1명, 기획 1명, 서버 4명과 프론트 3명으로 구성된 프로젝트입니다.`,
+    result: `
+  제 5회 UMC 해커톤에서 우수상을 수상했습니다.
+  react-calendar 라이브러리의 css를 수정하며 해당 라이브러리의 스타일을 수정하는 방법을 알게 되었습니다.
+  `,
+  },
+  {
+    id: 12,
+    title: "MyPlace",
+    skills: ["Node.js", "express", "JavaScript"],
+    description: "사용자 저장 장소 기반 기록 + 일정 관리 서비스",
+    duration: "2023.12.29~진행중",
+    part: ["Server"],
+    git: "https://github.com/MYPLACE-team/MYPLACE-Backend",
+
+    role: `
+    마플 서비스에 장소를 추가할 수 있는 기능을 구현했습니다.
+    사용자의 관심장소 추가/취소를 구현했습니다.
+
+    사용자가 다녀온 장소를 기록할 수 있는 아카이브의 CRUD를 구현했습니다.
+    `,
+    people: `
+  디자인 1명, 기획 1명, 서버 3명과 프론트 2명으로 구성된 프로젝트입니다.`,
   },
 ];

@@ -109,22 +109,24 @@ export const ActivityList: Activity[] = [
       },
     ],
   },
-  // {
-  //   id: 5,
-  //   title: "UMC 5th",
-  //   date: "2023.09~",
-  //   role: "Server Lead",
-  //   content: [
-  //     {
-  //       id: 0,
-  //       text: "5회 UMC 해커톤 우수상",
-  //       project: "Buddy-U",
-  //     },
-  //     {
-  //       id: 1,
-  //       text: "프로젝트 참여",
-  //       project: "My Place",
-  //     },
-  //   ],
-  // },
+  {
+    id: 5,
+    title: "UMC 5th",
+    date: "2023.09~",
+    role: "Server Lead",
+    content: [
+      {
+        id: 0,
+        text: "5회 UMC 해커톤 우수상",
+        project: "Buddy-U",
+        projectNum: 11,
+      },
+      {
+        id: 1,
+        text: "프로젝트 참여",
+        project: "My Place",
+        projectNum: 12,
+      },
+    ],
+  },
 ];
