@@ -54,7 +54,7 @@ const About = () => {
                 <div>React.js</div>
                 <div>Next.js</div>
                 <div>ReactNative</div>
-                <div>Node.js</div>
+                <div>Express</div>
               </div>
             </Skill>
             <Skill>

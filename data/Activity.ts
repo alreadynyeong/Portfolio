@@ -63,7 +63,7 @@ export const ActivityList: Activity[] = [
   {
     id: 3,
     title: "UMC 4th",
-    date: "2023.03~",
+    date: "2023.03~2023.09",
     role: "Member",
     content: [
       {
@@ -112,7 +112,7 @@ export const ActivityList: Activity[] = [
   {
     id: 5,
     title: "UMC 5th",
-    date: "2023.09~",
+    date: "2023.09~2024.02",
     role: "Server Lead",
     content: [
       {

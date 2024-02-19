@@ -47,7 +47,7 @@ const Detail = () => {
         </Top>
         <Parts part={data?.part} />
         <Skils skills={data?.skills} />
-        {!(data?.id === 10 || data?.id === 12) && (
+        {!(data?.id === 10) && (
           <ImageBox>
             <Image
               src={`https://alreadynyeong.github.io/Portfolio/projects/${data?.id}.png`}

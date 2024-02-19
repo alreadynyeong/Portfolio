@@ -9,7 +9,7 @@ const ProjectBox = ({ project }: { project: Project }) => {
   return (
     <Container main={project.main === true}>
       <ImageBox>
-        {!(project.id === 10 || project.id === 12) && (
+        {!(project.id === 10) && (
           <Image
             src={`https://alreadynyeong.github.io/Portfolio/projects/${project.id}.png`}
             width={isMobile ? 250 : 400}
