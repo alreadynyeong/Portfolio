@@ -47,16 +47,14 @@ const Detail = () => {
         </Top>
         <Parts part={data?.part} />
         <Skils skills={data?.skills} />
-        {!(data?.id === 10) && (
-          <ImageBox>
-            <Image
-              src={`https://alreadynyeong.github.io/Portfolio/projects/${data?.id}.png`}
-              width={isMobile ? 300 : 500}
-              height={isMobile ? 200 : 300}
-              alt={"사진 준비중"}
-            />
-          </ImageBox>
-        )}
+        <ImageBox>
+          <Image
+            src={`https://alreadynyeong.github.io/Portfolio/projects/${data?.id}.png`}
+            width={isMobile ? 300 : 500}
+            height={isMobile ? 200 : 300}
+            alt={"사진 준비중"}
+          />
+        </ImageBox>
         <Content>
           <SmallTitle>{data?.description}</SmallTitle>
           <RoleBox>
