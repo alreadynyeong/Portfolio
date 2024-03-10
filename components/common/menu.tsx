@@ -32,7 +32,7 @@ const MobileMenu = ({ onClose }: { onClose: OnCloseFunction }) => {
                 <a href={contact.path}>{contact.title}</a>
               </Contact>
             ))}
-            <Download href="https://drive.google.com/file/d/1J3MSbzoXUIJgAq4OWNblf1e7nIjD6Gon/view?usp=drive_link">
+            <Download href="https://drive.google.com/file/d/1PcyMIPIRUWVPdn8jKkdA4TAypm9hY61S/view?usp=sharing">
               PDF 다운로드
             </Download>
           </ContactBox>
