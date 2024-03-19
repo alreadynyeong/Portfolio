@@ -346,7 +346,7 @@ export const ProjectList: Project[] = [
 
     QA를 위해 vercel을 사용해 배포했습니다.
     `,
-    link: "https://iter.netlify.app/",
+    link: "https://iter-opal.vercel.app/",
     result: `
     이번 프로젝트를 통해 Stitches를 사용해 스타일을 정의하고, vite-plugin-svgr를 사용해 svg를 컴포넌트로 사용하는 경험을 할 수 있었습니다.
     또한, react-query를 사용해 데이터를 불러오고 수정하는 경험을 할 수 있었습니다.
