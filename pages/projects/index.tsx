@@ -14,10 +14,18 @@ const Projects = () => {
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
   const toggleSkill = (skill: string) => {
-    if (selectedSkills.includes(skill)) {
-      setSelectedSkills(selectedSkills.filter((s) => s !== skill));
+    if (skill === "Main") {
+      setSelectedSkills((prevSkills) =>
+        prevSkills.includes(skill) ? [] : [skill]
+      );
     } else {
-      setSelectedSkills([...selectedSkills, skill]);
+      setSelectedSkills((prevSkills) =>
+        prevSkills.includes("Main")
+          ? [skill]
+          : prevSkills.includes(skill)
+          ? prevSkills.filter((prevSkill) => prevSkill !== skill)
+          : [...prevSkills, skill]
+      );
     }
   };
 
@@ -53,6 +61,12 @@ const Projects = () => {
           <Skills>
             FILTER
             <Skill
+              onClick={() => toggleSkill("Main")}
+              active={selectedSkills.includes("Main")}
+            >
+              MAIN
+            </Skill>
+            <Skill
               onClick={() => toggleSkill("React")}
               active={selectedSkills.includes("React")}
             >
@@ -81,11 +95,16 @@ const Projects = () => {
         <ScrollContainer style={{ height: dynamicHeight }}>
           {ProjectList.slice()
             .reverse()
-            .filter(
-              (project) =>
-                selectedSkills.length === 0 ||
-                selectedSkills.some((skill) => project.skills.includes(skill))
-            )
+            .filter((project) => {
+              if (selectedSkills.includes("Main")) {
+                return project.main;
+              } else {
+                return (
+                  selectedSkills.length === 0 ||
+                  selectedSkills.some((skill) => project.skills.includes(skill))
+                );
+              }
+            })
             .map((project) => (
               <ProjectContainer key={project.id}>
                 <a href={`/Portfolio/project?id=${project.id}`}>
