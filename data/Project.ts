@@ -155,7 +155,7 @@ export const ProjectList: Project[] = [
     title: "수정광산",
     skills: ["React-native", "cli", "TypeScript", "StyleSheet"],
     description: "성신여자대학교 학생들을 위한 자체 커뮤니티 어플",
-    duration: "2022.10.13 ~",
+    duration: "2022.10.13 ~ 2023.12.20",
     part: ["Frontend"],
     link: "https://play.google.com/store/apps/details?id=com.crystalminefrontend&hl=ko&gl=US",
     role: `
